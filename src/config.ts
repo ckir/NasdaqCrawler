@@ -1,7 +1,7 @@
 import * as path from "node:path";
-import * as dotenv from "dotenv";
+import { config as envx } from "@dotenvx/dotenvx";
 
-dotenv.config();
+envx({ overload: true });
 
 function getInt(key: string, fallback: number): number {
 	const val = process.env[key];
