@@ -305,11 +305,13 @@ export async function runCrawler(): Promise<void> {
 					timeout: 30000,
 				});
 			} catch (err) {
-				console.warn(
-					`[crawler] Failed to load ${pageUrl}: ${(err as Error).message}`,
+				console.error(
+					`[crawler] Critical failure: Failed to load ${pageUrl}: ${(err as Error).message}`,
 				);
+				console.log("[crawler] Stopping gracefully due to load failure.");
 				await page.close();
-				continue;
+				signalShutdown();
+				break;
 			}
 
 			// Dismiss cookie/privacy consent banner if present
