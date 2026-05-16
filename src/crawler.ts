@@ -10,8 +10,20 @@ import { dismissConsentDialog } from "./consentHandler";
 import { randomDelay } from "./humanEmulation";
 import { clearState, loadState, saveState } from "./state";
 import { extractStaticApiUrls } from "./staticParser";
-import { loadOutputFile, saveOutputFile, upsertEndpoint } from "./storage";
-import type { ApiEndpoint, OutputFile } from "./types";
+import {
+	loadFileLinksFile,
+	loadOutputFile,
+	saveFileLinksFile,
+	saveOutputFile,
+	upsertEndpoint,
+	upsertFileLink,
+} from "./storage";
+import type {
+	ApiEndpoint,
+	FileLink,
+	FileLinksOutputFile,
+	OutputFile,
+} from "./types";
 import {
 	buildPatternMap,
 	extractApiPath,
@@ -191,6 +203,7 @@ export function signalShutdown(): void {
 
 export async function runCrawler(): Promise<void> {
 	const data: OutputFile = loadOutputFile();
+	const fileLinksData: FileLinksOutputFile = loadFileLinksFile();
 	const patternMap = buildPatternMap(Object.keys(data.endpoints));
 
 	const savedState = loadState();
@@ -280,8 +293,10 @@ export async function runCrawler(): Promise<void> {
 			try {
 				await page.setExtraHTTPHeaders({
 					"Accept-Language": "en-US,en;q=0.9",
-					"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-					"Sec-Ch-Ua": '"Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"',
+					Accept:
+						"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+					"Sec-Ch-Ua":
+						'"Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"',
 					"Sec-Ch-Ua-Mobile": "?0",
 					"Sec-Ch-Ua-Platform": '"Windows"',
 				});
@@ -376,6 +391,7 @@ export async function runCrawler(): Promise<void> {
 			}
 
 			let newLinksFound = 0;
+			let newFileLinksFound = 0;
 			for (const link of links) {
 				const normalized = normalizeUrl(link);
 				let pathname: string;
@@ -387,6 +403,23 @@ export async function runCrawler(): Promise<void> {
 				} catch {
 					continue;
 				}
+
+				// --- File Link Discovery ---
+				const ext = pathname.split(".").pop()?.toLowerCase() || "";
+				if (
+					NASDAQ_ORIGIN_RE.test(link) &&
+					config.fileExtensions.includes(ext)
+				) {
+					const fileLink: FileLink = {
+						url: normalized,
+						extension: ext,
+						seenOnPages: [{ url: pageUrl, title: pageTitle }],
+					};
+					if (upsertFileLink(fileLinksData, fileLink)) {
+						newFileLinksFound++;
+					}
+				}
+
 				if (BLOCKED_HOSTNAMES.has(hostname)) continue;
 				if (LOCALE_PATH_RE.test(pathname) || isBlockedPath(pathname)) continue;
 				// Skip enqueueing if this URL's pattern is already at visit limit
@@ -407,6 +440,10 @@ export async function runCrawler(): Promise<void> {
 			console.log(
 				`[crawler]   Discovered ${newLinksFound} new pages to visit (queue: ${pageQueue.length})`,
 			);
+			if (newFileLinksFound > 0) {
+				console.log(`[crawler]   +${newFileLinksFound} new file links found`);
+				saveFileLinksFile(fileLinksData);
+			}
 
 			await page.close();
 			saveState(visitedPages, pageQueue, pagePatternVisits);
@@ -425,6 +462,7 @@ export async function runCrawler(): Promise<void> {
 			`\n[crawler] Done. Visited ${pagesProcessed} pages. Total patterns: ${Object.keys(data.endpoints).length}`,
 		);
 		saveOutputFile(data);
+		saveFileLinksFile(fileLinksData);
 		clearState();
 	}
 }

@@ -1,7 +1,13 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { config } from "./config";
-import type { ApiEndpoint, OutputFile, PageRef } from "./types";
+import type {
+	ApiEndpoint,
+	FileLink,
+	FileLinksOutputFile,
+	OutputFile,
+	PageRef,
+} from "./types";
 
 const CURRENT_VERSION = 1;
 
@@ -30,6 +36,35 @@ export function saveOutputFile(data: OutputFile): void {
 	fs.writeFileSync(config.outputFile, JSON.stringify(data, null, 2), "utf-8");
 }
 
+export function loadFileLinksFile(): FileLinksOutputFile {
+	if (fs.existsSync(config.fileLinksOutputFile)) {
+		try {
+			const raw = fs.readFileSync(config.fileLinksOutputFile, "utf-8");
+			return JSON.parse(raw) as FileLinksOutputFile;
+		} catch {
+			console.warn(
+				"[storage] Could not parse existing file links file, starting fresh.",
+			);
+		}
+	}
+	return {
+		version: CURRENT_VERSION,
+		updatedAt: new Date().toISOString(),
+		links: {},
+	};
+}
+
+export function saveFileLinksFile(data: FileLinksOutputFile): void {
+	const dir = path.dirname(config.fileLinksOutputFile);
+	if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+	data.updatedAt = new Date().toISOString();
+	fs.writeFileSync(
+		config.fileLinksOutputFile,
+		JSON.stringify(data, null, 2),
+		"utf-8",
+	);
+}
+
 export function upsertEndpoint(
 	data: OutputFile,
 	endpoint: ApiEndpoint,
@@ -48,5 +83,24 @@ export function upsertEndpoint(
 		return false; // already had this pattern
 	}
 	data.endpoints[endpoint.pattern] = endpoint;
+	return true; // newly added
+}
+
+export function upsertFileLink(
+	data: FileLinksOutputFile,
+	link: FileLink,
+): boolean {
+	const existing = data.links[link.url];
+	if (existing) {
+		let added = false;
+		for (const page of link.seenOnPages) {
+			if (!existing.seenOnPages.some((p: PageRef) => p.url === page.url)) {
+				existing.seenOnPages.push(page);
+				added = true;
+			}
+		}
+		return added;
+	}
+	data.links[link.url] = link;
 	return true; // newly added
 }

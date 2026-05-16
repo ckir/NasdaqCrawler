@@ -18,3 +18,15 @@ export interface OutputFile {
 	updatedAt: string;
 	endpoints: Record<string, ApiEndpoint>; // keyed by pattern
 }
+
+export interface FileLink {
+	url: string;
+	extension: string;
+	seenOnPages: PageRef[];
+}
+
+export interface FileLinksOutputFile {
+	version: number;
+	updatedAt: string;
+	links: Record<string, FileLink>; // keyed by URL
+}

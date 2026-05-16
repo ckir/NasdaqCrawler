@@ -15,13 +15,23 @@ function getBool(key: string, fallback: boolean): boolean {
 	return val.toLowerCase() === "true";
 }
 
+const outputFile = path.resolve(
+	process.env.OUTPUT_FILE ?? "./output/api-endpoints.json",
+);
+
 export const config = {
 	headless: getBool("HEADLESS", false),
 	testMode: getBool("TEST_MODE", false),
 	testLimit: getInt("TEST_LIMIT", 2),
-	outputFile: path.resolve(
-		process.env.OUTPUT_FILE ?? "./output/api-endpoints.json",
+	outputFile,
+	fileLinksOutputFile: path.resolve(
+		path.dirname(outputFile),
+		"file-links.json",
 	),
+	fileExtensions: (process.env.FILE_EXTENSIONS ?? "csv,xlsx")
+		.split(",")
+		.map((e) => e.trim().toLowerCase())
+		.filter(Boolean),
 	minDelayMs: getInt("MIN_DELAY_MS", 1500),
 	maxDelayMs: getInt("MAX_DELAY_MS", 4500),
 	startUrl: process.env.START_URL ?? "https://www.nasdaq.com",

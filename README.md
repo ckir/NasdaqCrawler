@@ -8,6 +8,7 @@ An automated crawler designed to discover, map, and document the internal API en
 - **API Pattern Mapping**: Automatically identifies and groups similar API endpoints (e.g., collapsing `/api/quote/AAPL/info` and `/api/quote/MSFT/info` into `/api/quote/{var}/info`).
 - **Network Interception**: Captures real-time traffic to identify active endpoints and save representative response JSON samples.
 - **Static Analysis**: Parses JavaScript bundles on the fly to find static references to API URLs.
+- **File Link Discovery**: Automatically identifies and records links to downloadable files (e.g., CSV, XLSX) hosted on the target domain.
 - **Human Emulation**: Includes random delays and browser-like headers to minimize automated detection.
 - **State Persistence**: Saves crawl state (visited pages, queue) to `state.json`, allowing you to resume interrupted crawls.
 - **Blacklist & Throttling**: Intelligent path blacklisting (ignoring news/corporate pages) and structural throttling (limiting visits to similar page patterns like individual stock pages).
@@ -43,6 +44,7 @@ TEST_LIMIT=2
 
 # Output and Timing
 OUTPUT_FILE=./output/api-endpoints.json
+FILE_EXTENSIONS=csv,xlsx
 MIN_DELAY_MS=1500
 MAX_DELAY_MS=4500
 START_URL=https://www.nasdaq.com
@@ -86,6 +88,12 @@ All discovered endpoints are saved to the path specified in `OUTPUT_FILE` (defau
 - **Source**: Whether it was found via network interception or static parsing.
 - **Response Sample**: A truncated JSON sample of the API response.
 - **Metadata**: Timestamps and the list of pages where the endpoint was first seen.
+
+### File Links
+Discovered links to files (CSV, XLSX, etc.) are saved to `file-links.json` in the same output directory. The file contains:
+- **URL**: The direct link to the file.
+- **Extension**: The detected file type.
+- **Seen On Pages**: A list of pages (URL and title) where the link was discovered.
 
 ## Project Structure
 

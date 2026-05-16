@@ -16,6 +16,8 @@ jest.mock("./storage", () => ({
 	loadOutputFile: jest.fn().mockReturnValue({ endpoints: {} }),
 	saveOutputFile: jest.fn(),
 	upsertEndpoint: jest.fn(),
+	loadFileLinksFile: jest.fn().mockReturnValue({ links: {} }),
+	saveFileLinksFile: jest.fn(),
 }));
 
 jest.mock("./state", () => ({
@@ -36,6 +38,8 @@ jest.mock("./config", () => ({
 		outputFile: "output/test.json",
 		minDelayMs: 10,
 		maxDelayMs: 20,
+		fileExtensions: ["csv", "xlsx"],
+		fileLinksOutputFile: "output/test-file-links.json",
 	},
 }));
 
