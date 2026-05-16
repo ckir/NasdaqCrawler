@@ -1,0 +1,35 @@
+{
+	"name": "nasdaq_crawler",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "ts-node src/index.ts",
+		"start:headless": "cross-env HEADLESS=true ts-node src/index.ts",
+		"crawl:test": "cross-env TEST_MODE=true ts-node src/index.ts",
+		"build": "tsc",
+		"test": "jest",
+		"lint": "biome check . --write --unsafe --max-diagnostics=100",
+		"format": "biome format . --write",
+		"validate": "pnpm format && pnpm lint && pnpm test && pnpm build",
+		"clean": "rimraf output/*.json"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"packageManager": "pnpm@10.31.0",
+	"dependencies": {
+		"dotenv": "^17.4.2",
+		"playwright": "^1.60.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.4.15",
+		"@types/jest": "^30.0.0",
+		"@types/node": "^25.8.0",
+		"cross-env": "^10.1.0",
+		"jest": "^30.4.2",
+		"ts-jest": "^29.4.9",
+		"ts-node": "^10.9.2",
+		"typescript": "^6.0.3"
+	}
+}

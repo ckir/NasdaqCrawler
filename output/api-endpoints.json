@@ -1,0 +1,2871 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-15T21:41:38.120Z",
+  "endpoints": {
+    "/api/quote/list-type-extended/RTAT": {
+      "pattern": "/api/quote/list-type-extended/RTAT",
+      "exampleUrl": "https://api.nasdaq.com/api/quote/list-type-extended/RTAT",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "title": "Retail Trading Activity Tracker",
+          "subtitle": "Top 5 by Percent of Retail Equity Flow",
+          "date": "Data as of May 14, 2026",
+          "table": {
+            "asOf": null,
+            "headers": {
+              "ticker": "SYMBOL",
+              "activity": "ACTIVITY",
+              "sentiment": "SENTIMENT"
+            },
+            "rows": [
+              {
+                "ticker": [
+                  "NVDA",
+                  "NVIDIA Corporation Common Stock"
+                ],
+                "activity": "+5.34%",
+                "sentiment": "BUY +2",
+                "url": "/market-activity/stocks/nvda",
+                "deltaIndicator": "up"
+              },
+              {
+                "ticker": [
+                  "MU",
+                  "Micron Technology, Inc. Common Stock"
+                ],
+                "activity": "-3.11%",
+                "sentiment": "SELL -6",
+                "url": "/market-activity/stocks/mu",
+                "deltaIndicator": "down"
+              }
+            ]
+          }
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:09:13.010Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity",
+          "title": "Market Activity | Nasdaq"
+        }
+      ]
+    },
+    "/api/market-info": {
+      "pattern": "/api/market-info",
+      "exampleUrl": "https://api.nasdaq.com/api/market-info",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "country": "U.S.",
+          "marketIndicator": "After Hours",
+          "uiMarketIndicator": "After Hours",
+          "marketCountDown": "Market Opens in 2D 16H 21M",
+          "preMarketOpeningTime": "May 15, 2026 04:00 AM ET",
+          "preMarketClosingTime": "May 15, 2026 09:30 AM ET",
+          "marketOpeningTime": "May 15, 2026 09:30 AM ET",
+          "marketClosingTime": "May 15, 2026 04:00 PM ET",
+          "afterHoursMarketOpeningTime": "May 15, 2026 04:00 PM ET",
+          "afterHoursMarketClosingTime": "May 15, 2026 08:00 PM ET",
+          "previousTradeDate": "May 14, 2026",
+          "nextTradeDate": "May 18, 2026",
+          "isBusinessDay": true,
+          "mrktStatus": "After-Hours",
+          "mrktCountDown": "Opens in 2D 16H 21M",
+          "pmOpenRaw": "2026-05-15T04:00:00",
+          "ahCloseRaw": "2026-05-15T20:00:00",
+          "openRaw": "2026-05-15T09:30:00",
+          "closeRaw": "2026-05-15T16:00:00"
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:09:13.011Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity",
+          "title": "Market Activity | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks",
+          "title": "Stock Market Data with Stock Price Feeds | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf",
+          "title": "Exchange-Traded Funds (ETFs) Market Activity Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund",
+          "title": "Mutual Funds | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/indexes",
+          "title": "Global Markets Indexes & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency",
+          "title": "Cryptocurrencies | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/currencies",
+          "title": "Currencies | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/fixed-income",
+          "title": "Fixed Income | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/screener",
+          "title": "Stock Screener | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/economic-calendar",
+          "title": "Economic Calendar | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/earnings",
+          "title": "Earnings Reports | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/ipos",
+          "title": "IPO Listings | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/dividends",
+          "title": "Dividend Calendar | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/spos",
+          "title": "Secondary Public Offerings (SPOs) | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/most-active",
+          "title": "Most Active Stocks | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/comp",
+          "title": "NASDAQ Composite Index (COMP) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/ndx",
+          "title": "NASDAQ-100 (NDX) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nbi",
+          "title": "NASDAQ Biotechnology (NBI) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl",
+          "title": "Apple (AAPL) Stock Price, Quote, News & History | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq",
+          "title": "Invesco QQQ Trust, Series 1 (QQQ) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/btc",
+          "title": "Bitcoin (BTC) Latest Prices, Charts & Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/spy",
+          "title": "State Street SPDR S&P 500 ETF Trust (SPY) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/schd",
+          "title": "Schwab US Dividend Equity ETF (SCHD) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/vfinx",
+          "title": "Vanguard Index Trust 500 Index Fund (VFINX) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/fcntx",
+          "title": "Fidelity Contra Fund (FCNTX) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/agthx",
+          "title": "The Growth Fund of America Class A Shares (AGTHX) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nqus500lc",
+          "title": "Nasdaq US 500 Large Cap (NQUS500LC) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/eth",
+          "title": "Ethereum (ETH) Latest Prices, Charts & Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/xrp",
+          "title": "XRP (XRP) Latest Prices, Charts & Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/comp/historical",
+          "title": "NASDAQ Composite Index (COMP) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/comp/news-headlines",
+          "title": "The Latest NASDAQ Composite Index (COMP) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/ndx/historical",
+          "title": "NASDAQ-100 (NDX) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/ndx/news-headlines",
+          "title": "The Latest NASDAQ-100 (NDX) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nbi/historical",
+          "title": "NASDAQ Biotechnology (NBI) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nbi/news-headlines",
+          "title": "The Latest NASDAQ Biotechnology (NBI) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/advanced-charting",
+          "title": "Apple (AAPL) Advanced Charting | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/news-headlines",
+          "title": "Apple (AAPL) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/press-releases",
+          "title": "Apple (AAPL) Press Releases | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/historical",
+          "title": "Apple (AAPL) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/financials",
+          "title": "Apple (AAPL) Financials | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/earnings",
+          "title": "Apple (AAPL) Earnings Report Date | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/sec-filings",
+          "title": "Apple (AAPL) SEC Filings | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/revenue-eps",
+          "title": "Apple (AAPL) Revenue EPS | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq/advanced-charting",
+          "title": "Invesco QQQ Trust, Series 1 (QQQ) Advanced Charting | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq/news-headlines",
+          "title": "(QQQ) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq/press-releases",
+          "title": "Invesco QQQ Trust, Series 1 (QQQ) Press Releases | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq/historical",
+          "title": "(QQQ) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/btc/historical",
+          "title": "Bitcoin (BTC) Historical Prices | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/btc/news-headlines",
+          "title": "Bitcoin (BTC) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/spy/historical",
+          "title": "(SPY) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/schd/historical",
+          "title": "(SCHD) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/screener?exchange=nasdaq",
+          "title": "Stock Screener | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/vfinx/historical",
+          "title": "(VFINX) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/fcntx/historical",
+          "title": "(FCNTX) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/agthx/historical",
+          "title": "(AGTHX) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nqus500lc/historical",
+          "title": "Nasdaq US 500 Large Cap (NQUS500LC) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nqus500lc/news-headlines",
+          "title": "The Latest Nasdaq US 500 Large Cap (NQUS500LC) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/eth/historical",
+          "title": "Ethereum (ETH) Historical Prices | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/eth/news-headlines",
+          "title": "Ethereum (ETH) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/xrp/historical",
+          "title": "XRP (XRP) Historical Prices | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/xrp/news-headlines",
+          "title": "XRP (XRP) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/screener?page=1&rows_per_page=25",
+          "title": "Stock Screener | Nasdaq"
+        }
+      ]
+    },
+    "/api/quote/indices": {
+      "pattern": "/api/quote/indices",
+      "exampleUrl": "https://api.nasdaq.com/api/quote/indices?symbol=NDX&symbol=NBI&symbol=NGX&symbol=IXTC&chartFor=NDX",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": [
+          {
+            "symbol": "IXTC",
+            "companyName": "NASDAQ Telecommunications",
+            "lastSalePrice": "640.48",
+            "previousClose": "641.39",
+            "netChange": "-0.91",
+            "percentageChange": "-0.14%",
+            "volume": "0",
+            "deltaIndicator": "down",
+            "timeStamp": "May 15, 2026",
+            "datetime": "2026-05-15T17:07:59",
+            "high": 644.4,
+            "low": 632.89,
+            "indexCharts": null,
+            "chartOpenTime": 1778837400000,
+            "chartCloseTime": 1778860859000
+          },
+          {
+            "symbol": "NBI",
+            "companyName": "NASDAQ Biotechnology",
+            "lastSalePrice": "5,825.51",
+            "previousClose": "5,988.03",
+            "netChange": "-162.52",
+            "percentageChange": "-2.71%",
+            "volume": "0",
+            "deltaIndicator": "down",
+            "timeStamp": "May 15, 2026",
+            "datetime": "2026-05-15T17:07:59",
+            "high": 5951.27,
+            "low": 5814.09,
+            "indexCharts": null,
+            "chartOpenTime": 1778837400000,
+            "chartCloseTime": 1778860859000
+          }
+        ],
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:09:13.012Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity",
+          "title": "Market Activity | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/indexes",
+          "title": "Global Markets Indexes & News | Nasdaq"
+        }
+      ]
+    },
+    "/api/quote/basic": {
+      "pattern": "/api/quote/basic",
+      "exampleUrl": "https://api.nasdaq.com/api/quote/basic?&symbol=omxn40%7cindex&symbol=omxs30%7cindex&symbol=omxh25%7cindex",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "date": "",
+          "records": [
+            {
+              "key": "OMXN40|INDEX",
+              "ticker": [
+                "OMXN40",
+                "Omx Nordic 40"
+              ],
+              "lastSale": "2,605.54",
+              "change": "-11.16",
+              "pctChange": "-0.43%",
+              "deltaIndicator": "down",
+              "volume": "",
+              "url": "/market-activity/index/omxn40",
+              "assetclass": "INDEX"
+            },
+            {
+              "key": "OMXS30|INDEX",
+              "ticker": [
+                "OMXS30",
+                "Omx Stockholm 30 Index"
+              ],
+              "lastSale": "3,036.44",
+              "change": "-11.67",
+              "pctChange": "-0.38%",
+              "deltaIndicator": "down",
+              "volume": "",
+              "url": "/market-activity/index/omxs30",
+              "assetclass": "INDEX"
+            }
+          ]
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:09:46.273Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com",
+          "title": "Nasdaq: Stock Market, Data Updates, Reports & News"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks",
+          "title": "Stock Market Data with Stock Price Feeds | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf",
+          "title": "Exchange-Traded Funds (ETFs) Market Activity Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund",
+          "title": "Mutual Funds | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/indexes",
+          "title": "Global Markets Indexes & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency",
+          "title": "Cryptocurrencies | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/currencies",
+          "title": "Currencies | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/fixed-income",
+          "title": "Fixed Income | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/ndx",
+          "title": "NASDAQ-100 (NDX) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nbi",
+          "title": "NASDAQ Biotechnology (NBI) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl",
+          "title": "Apple (AAPL) Stock Price, Quote, News & History | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq",
+          "title": "Invesco QQQ Trust, Series 1 (QQQ) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/btc",
+          "title": "Bitcoin (BTC) Latest Prices, Charts & Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/spy",
+          "title": "State Street SPDR S&P 500 ETF Trust (SPY) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/schd",
+          "title": "Schwab US Dividend Equity ETF (SCHD) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nqus500lc",
+          "title": "Nasdaq US 500 Large Cap (NQUS500LC) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/eth",
+          "title": "Ethereum (ETH) Latest Prices, Charts & Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/xrp",
+          "title": "XRP (XRP) Latest Prices, Charts & Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/comp/historical",
+          "title": "NASDAQ Composite Index (COMP) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/comp/news-headlines",
+          "title": "The Latest NASDAQ Composite Index (COMP) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/ndx/historical",
+          "title": "NASDAQ-100 (NDX) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/ndx/news-headlines",
+          "title": "The Latest NASDAQ-100 (NDX) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nbi/historical",
+          "title": "NASDAQ Biotechnology (NBI) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nbi/news-headlines",
+          "title": "The Latest NASDAQ Biotechnology (NBI) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/advanced-charting",
+          "title": "Apple (AAPL) Advanced Charting | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/news-headlines",
+          "title": "Apple (AAPL) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/press-releases",
+          "title": "Apple (AAPL) Press Releases | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/historical",
+          "title": "Apple (AAPL) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/financials",
+          "title": "Apple (AAPL) Financials | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/earnings",
+          "title": "Apple (AAPL) Earnings Report Date | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/sec-filings",
+          "title": "Apple (AAPL) SEC Filings | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/revenue-eps",
+          "title": "Apple (AAPL) Revenue EPS | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq/advanced-charting",
+          "title": "Invesco QQQ Trust, Series 1 (QQQ) Advanced Charting | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq/news-headlines",
+          "title": "(QQQ) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq/press-releases",
+          "title": "Invesco QQQ Trust, Series 1 (QQQ) Press Releases | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq/historical",
+          "title": "(QQQ) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/btc/historical",
+          "title": "Bitcoin (BTC) Historical Prices | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/btc/news-headlines",
+          "title": "Bitcoin (BTC) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/spy/historical",
+          "title": "(SPY) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/schd/historical",
+          "title": "(SCHD) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nqus500lc/historical",
+          "title": "Nasdaq US 500 Large Cap (NQUS500LC) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nqus500lc/news-headlines",
+          "title": "The Latest Nasdaq US 500 Large Cap (NQUS500LC) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/eth/historical",
+          "title": "Ethereum (ETH) Historical Prices | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/eth/news-headlines",
+          "title": "Ethereum (ETH) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/xrp/historical",
+          "title": "XRP (XRP) Historical Prices | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/xrp/news-headlines",
+          "title": "XRP (XRP) News Headlines | Nasdaq"
+        }
+      ]
+    },
+    "/api/marketmovers": {
+      "pattern": "/api/marketmovers",
+      "exampleUrl": "https://api.nasdaq.com/api/marketmovers?assetclass=stocks&exchangeStatus=currentMarket&limit=5",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "STOCKS": {
+            "MostActiveByShareVolume": {
+              "dataAsOf": "Data as of May 15, 2026 5:07 PM ET",
+              "lastTradeTimestamp": "May 15, 2026 5:07 PM ET",
+              "table": {
+                "asOf": null,
+                "headers": {
+                  "symbol": "Symbol",
+                  "name": "Name",
+                  "lastSalePrice": "Last",
+                  "lastSaleChange": "Change",
+                  "change": "Share Volume"
+                },
+                "rows": [
+                  {
+                    "symbol": "SOXS",
+                    "name": "Direxion Daily Semiconductor Bear 3x Shares",
+                    "lastSalePrice": "$9.255",
+                    "lastSaleChange": "+0.985",
+                    "change": "394,664,097.912339",
+                    "deltaIndicator": "up"
+                  },
+                  {
+                    "symbol": "HCWB",
+                    "name": "HCW Biologics Inc.",
+                    "lastSalePrice": "$1.22",
+                    "lastSaleChange": "+0.883",
+                    "change": "384,914,940.367322",
+                    "deltaIndicator": "up"
+                  }
+                ]
+              }
+            },
+            "MostAdvanced": {
+              "dataAsOf": "Data as of May 15, 2026 5:07 PM ET",
+              "lastTradeTimestamp": "May 15, 2026 5:07 PM ET",
+              "table": {
+                "asOf": null,
+                "headers": {
+                  "symbol": "Symbol",
+                  "name": "Name",
+                  "lastSalePrice": "Last",
+                  "lastSaleChange": "Change",
+                  "change": "% Change"
+                },
+                "rows": [
+                  {
+                    "symbol": "DUKRW",
+                    "name": "DUKE Robotics Corp. Warrant",
+                    "lastSalePrice": "$1.8",
+                    "lastSaleChange": "+1.79",
+                    "change": "+17900%",
+                    "deltaIndicator": "up"
+                  },
+                  {
+                    "symbol": "EXYNW",
+                    "name": "Exyn Technologies, Inc. Warrant",
+                    "lastSalePrice": "$0.81",
+                    "lastSaleChange": "+0.8",
+                    "change": "+8000%",
+                    "deltaIndicator": "up"
+                  }
+                ]
+              }
+            },
+            "MostDeclined": {
+              "dataAsOf": "Data as of May 15, 2026 5:07 PM ET",
+              "lastTradeTimestamp": "May 15, 2026 5:07 PM ET",
+              "table": {
+                "asOf": null,
+                "headers": {
+                  "symbol": "Symbol",
+                  "name": "Name",
+                  "lastSalePrice": "Last",
+                  "lastSaleChange": "Change",
+                  "change": "% Change"
+                },
+                "rows": [
+                  {
+                    "symbol": "ELPW",
+                    "name": "Elong Power Holding Limited",
+                    "lastSalePrice": "$0.95",
+                    "lastSaleChange": "-0.99",
+                    "change": "-51.0309%",
+                    "deltaIndicator": "down"
+                  },
+                  {
+                    "symbol": "WOK",
+                    "name": "WORK Medical Technology Group LTD",
+                    "lastSalePrice": "$0.66",
+                    "lastSaleChange": "-0.64",
+                    "change": "-49.2308%",
+                    "deltaIndicator": "down"
+                  }
+                ]
+              }
+            },
+            "MostActiveByDollarVolume": {
+              "dataAsOf": "Data as of May 15, 2026 5:07 PM ET",
+              "lastTradeTimestamp": "May 15, 2026 5:07 PM ET",
+              "table": {
+                "asOf": null,
+                "headers": {
+                  "symbol": "Symbol",
+                  "name": "Name",
+                  "lastSalePrice": "Last",
+                  "lastSaleChange": "Change",
+                  "change": "% Change"
+                },
+                "rows": [
+                  {
+                    "symbol": "NVDA",
+                    "name": "NVIDIA Corporation",
+                    "lastSalePrice": "$225.32",
+                    "lastSaleChange": "-10.42",
+                    "change": "-4.4201%",
+                    "deltaIndicator": "down"
+                  },
+                  {
+                    "symbol": "MU",
+                    "name": "Micron Technology, Inc.",
+                    "lastSalePrice": "$724.66",
+                    "lastSaleChange": "-51.35",
+                    "change": "-6.6172%",
+                    "deltaIndicator": "down"
+                  }
+                ]
+              }
+            },
+            "Nasdaq100Movers": {
+              "dataAsOf": "Data as of May 15, 2026 4:00 PM ET",
+              "lastTradeTimestamp": "May 15, 2026 4:00 PM ET",
+              "table": {
+                "asOf": null,
+                "headers": {
+                  "symbol": "Symbol",
+                  "name": "Name",
+                  "lastSalePrice": "Last",
+                  "lastSaleChange": "Change",
+                  "change": "% Change"
+                },
+                "rows": [
+                  {
+                    "symbol": "ADBE",
+                    "name": "Adobe Inc. Common Stock",
+                    "lastSalePrice": "247.6",
+                    "lastSaleChange": "+11.5300",
+                    "change": "+4.88%",
+                    "deltaIndicator": "up"
+                  },
+                  {
+                    "symbol": "AMD",
+                    "name": "Advanced Micro Devices, Inc. Common Stock",
+                    "lastSalePrice": "424.1",
+                    "lastSaleChange": "-21.4000",
+                    "change": "-4.80%",
+                    "deltaIndicator": "down"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:10:17.894Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks",
+          "title": "Stock Market Data with Stock Price Feeds | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund",
+          "title": "Mutual Funds | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency",
+          "title": "Cryptocurrencies | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/most-active",
+          "title": "Most Active Stocks | Nasdaq"
+        }
+      ]
+    },
+    "/api/quote/QQQ/chart": {
+      "pattern": "/api/quote/QQQ/chart",
+      "exampleUrl": "https://api.nasdaq.com/api/quote/QQQ/chart?assetclass=etf",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "symbol": "QQQ",
+          "company": "Invesco QQQ Trust, Series 1",
+          "timeAsOf": "May 15, 2026 5:10 PM ET",
+          "isNasdaq100": false,
+          "lastSalePrice": "$707.61",
+          "netChange": "-1.32",
+          "percentageChange": "-0.19%",
+          "deltaIndicator": "down",
+          "previousClose": "$714.71",
+          "volume": "33,328,526",
+          "exchange": "NASDAQ-GM",
+          "chart": [
+            {
+              "z": {
+                "dateTime": "4:00 AM ET",
+                "value": "710.47"
+              },
+              "x": 1778817600000,
+              "y": 710.47
+            },
+            {
+              "z": {
+                "dateTime": "4:01 AM ET",
+                "value": "712.00"
+              },
+              "x": 1778817660000,
+              "y": 712
+            }
+          ],
+          "volumeChart": [
+            {
+              "z": {
+                "dateTime": "4:00 AM ET",
+                "value": "710.47"
+              },
+              "x": 1778817600000,
+              "y": 710.47
+            },
+            {
+              "z": {
+                "dateTime": "4:01 AM ET",
+                "value": "712.00"
+              },
+              "x": 1778817660000,
+              "y": 712
+            }
+          ],
+          "events": null
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:10:47.315Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf",
+          "title": "Exchange-Traded Funds (ETFs) Market Activity Data & News | Nasdaq"
+        }
+      ]
+    },
+    "/api/quote/watchlist": {
+      "pattern": "/api/quote/watchlist",
+      "exampleUrl": "https://api.nasdaq.com/api/quote/watchlist?symbol=btc%7ccrypto&symbol=eth%7ccrypto&symbol=xrp%7ccrypto&symbol=bch%7ccrypto&symbol=ada%7ccrypto&symbol=ltc%7ccrypto&symbol=xem%7ccrypto&symbol=xlm%7ccrypto",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": [
+          {
+            "symbol": "BTC",
+            "companyName": "BITCOIN",
+            "lastSalePrice": "79,146.20",
+            "netChange": "-2,246.30",
+            "percentageChange": "-2.76%",
+            "deltaIndicator": "down",
+            "lastTradeTimestamp": "May 15, 2026 5:04 PM ET ",
+            "lastTradeTimestampDateTime": "2026-05-15T17:04:02",
+            "volume": "",
+            "assetClass": "CRYPTO",
+            "previousClosePrice": null,
+            "openingPrice": 81392.5,
+            "marketStatus": null
+          },
+          {
+            "symbol": "ETH",
+            "companyName": "ETHEREUM",
+            "lastSalePrice": "2,222.05",
+            "netChange": "-75.29",
+            "percentageChange": "-3.28%",
+            "deltaIndicator": "down",
+            "lastTradeTimestamp": "May 15, 2026 5:04 PM ET ",
+            "lastTradeTimestampDateTime": "2026-05-15T17:04:02",
+            "volume": "",
+            "assetClass": "CRYPTO",
+            "previousClosePrice": null,
+            "openingPrice": 2297.34,
+            "marketStatus": null
+          }
+        ],
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:12:11.220Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency",
+          "title": "Cryptocurrencies | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/currencies",
+          "title": "Currencies | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/comp",
+          "title": "NASDAQ Composite Index (COMP) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/ndx",
+          "title": "NASDAQ-100 (NDX) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nbi",
+          "title": "NASDAQ Biotechnology (NBI) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/non-compliant-company-list",
+          "title": "Noncompliant Companies | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/issuers-pending-suspension-delisting",
+          "title": "Issues Pending Suspension or Delisting | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/ipos/overview?dealId=1348823-117360",
+          "title": "RIKU DINING GROUP Ltd (RIKU) IPO - NASDAQ.com"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stock-splits",
+          "title": "Stock Splits | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/indexes/screener",
+          "title": "Stock Screener - Free Stock Market Screeners | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl",
+          "title": "Apple (AAPL) Stock Price, Quote, News & History | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq",
+          "title": "Invesco QQQ Trust, Series 1 (QQQ) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/btc",
+          "title": "Bitcoin (BTC) Latest Prices, Charts & Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/TradeTalks",
+          "title": "Nasdaq TradeTalks | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/screener",
+          "title": "Stock Screener - Free Stock Market Screeners | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/spy",
+          "title": "State Street SPDR S&P 500 ETF Trust (SPY) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/schd",
+          "title": "Schwab US Dividend Equity ETF (SCHD) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/vfinx",
+          "title": "Vanguard Index Trust 500 Index Fund (VFINX) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/fcntx",
+          "title": "Fidelity Contra Fund (FCNTX) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/agthx",
+          "title": "The Growth Fund of America Class A Shares (AGTHX) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nqus500lc",
+          "title": "Nasdaq US 500 Large Cap (NQUS500LC) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/eth",
+          "title": "Ethereum (ETH) Latest Prices, Charts & Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/xrp",
+          "title": "XRP (XRP) Latest Prices, Charts & Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-funds/screener",
+          "title": "Stock Screener - Free Stock Market Screeners | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/comp/historical",
+          "title": "NASDAQ Composite Index (COMP) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/comp/news-headlines",
+          "title": "The Latest NASDAQ Composite Index (COMP) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/ndx/historical",
+          "title": "NASDAQ-100 (NDX) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/ndx/news-headlines",
+          "title": "The Latest NASDAQ-100 (NDX) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nbi/historical",
+          "title": "NASDAQ Biotechnology (NBI) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nbi/news-headlines",
+          "title": "The Latest NASDAQ Biotechnology (NBI) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/ipos/financial-filings?dealId=1348823-117360",
+          "title": "Financial Filings | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/ipos/experts?dealId=1348823-117360",
+          "title": "Experts | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/advanced-charting",
+          "title": "Apple (AAPL) Advanced Charting | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/news-headlines",
+          "title": "Apple (AAPL) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/press-releases",
+          "title": "Apple (AAPL) Press Releases | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/historical",
+          "title": "Apple (AAPL) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/financials",
+          "title": "Apple (AAPL) Financials | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/earnings",
+          "title": "Apple (AAPL) Earnings Report Date | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/sec-filings",
+          "title": "Apple (AAPL) SEC Filings | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/revenue-eps",
+          "title": "Apple (AAPL) Revenue EPS | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq/advanced-charting",
+          "title": "Invesco QQQ Trust, Series 1 (QQQ) Advanced Charting | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq/news-headlines",
+          "title": "(QQQ) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq/press-releases",
+          "title": "Invesco QQQ Trust, Series 1 (QQQ) Press Releases | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq/historical",
+          "title": "(QQQ) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/btc/historical",
+          "title": "Bitcoin (BTC) Historical Prices | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/btc/news-headlines",
+          "title": "Bitcoin (BTC) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/spy/historical",
+          "title": "(SPY) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/schd/historical",
+          "title": "(SCHD) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/screener?exchange=nasdaq",
+          "title": "Stock Screener | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/vfinx/historical",
+          "title": "(VFINX) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/fcntx/historical",
+          "title": "(FCNTX) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/agthx/historical",
+          "title": "(AGTHX) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nqus500lc/historical",
+          "title": "Nasdaq US 500 Large Cap (NQUS500LC) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nqus500lc/news-headlines",
+          "title": "The Latest Nasdaq US 500 Large Cap (NQUS500LC) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/eth/historical",
+          "title": "Ethereum (ETH) Historical Prices | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/eth/news-headlines",
+          "title": "Ethereum (ETH) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/xrp/historical",
+          "title": "XRP (XRP) Historical Prices | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/xrp/news-headlines",
+          "title": "XRP (XRP) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/screener?page=1&rows_per_page=25",
+          "title": "Stock Screener | Nasdaq"
+        }
+      ]
+    },
+    "/api/screener/stocks": {
+      "pattern": "/api/screener/stocks",
+      "exampleUrl": "https://api.nasdaq.com/api/screener/stocks?tableonly=false&limit=25",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "filters": {
+            "region": [
+              {
+                "name": "Africa",
+                "value": "africa"
+              },
+              {
+                "name": "Asia",
+                "value": "asia"
+              }
+            ],
+            "country": [
+              {
+                "name": "United States",
+                "value": "united_states"
+              },
+              {
+                "name": "China",
+                "value": "china"
+              }
+            ],
+            "exchange": [
+              {
+                "name": "NASDAQ",
+                "value": "NASDAQ"
+              },
+              {
+                "name": "NYSE",
+                "value": "NYSE"
+              }
+            ],
+            "sector": [
+              {
+                "name": "Technology",
+                "value": "technology"
+              },
+              {
+                "name": "Telecommunications",
+                "value": "telecommunications"
+              }
+            ],
+            "recommendation": [
+              {
+                "name": "Strong Buy",
+                "value": "strong_buy"
+              },
+              {
+                "name": "Hold",
+                "value": "hold"
+              }
+            ],
+            "marketcap": [
+              {
+                "name": "Mega (>$200B)",
+                "value": "mega"
+              },
+              {
+                "name": "Large ($10B-$200B)",
+                "value": "large"
+              }
+            ],
+            "exsubcategory": [
+              {
+                "name": "Global Select",
+                "value": "NGS"
+              },
+              {
+                "name": "Global Market",
+                "value": "NGM"
+              }
+            ]
+          },
+          "table": {
+            "asOf": null,
+            "headers": {
+              "symbol": "Symbol",
+              "name": "Name",
+              "lastsale": "Last Sale",
+              "netchange": "Net Change",
+              "pctchange": "% Change",
+              "marketCap": "Market Cap"
+            },
+            "rows": [
+              {
+                "symbol": "NVDA",
+                "name": "NVIDIA Corporation Common Stock",
+                "lastsale": "$225.32",
+                "netchange": "-10.42",
+                "pctchange": "-4.42%",
+                "marketCap": "5,478,011,792,629",
+                "url": "/market-activity/stocks/nvda"
+              },
+              {
+                "symbol": "GOOGL",
+                "name": "Alphabet Inc. Class A Common Stock",
+                "lastsale": "$396.78",
+                "netchange": "-4.29",
+                "pctchange": "-1.07%",
+                "marketCap": "4,807,386,480,000",
+                "url": "/market-activity/stocks/googl"
+              }
+            ]
+          },
+          "totalrecords": 7071,
+          "asof": "Last price as of Oct 6, 2026"
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:13:25.798Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/screener",
+          "title": "Stock Screener | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/screener?exchange=nasdaq",
+          "title": "Stock Screener | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/screener?page=1&rows_per_page=25",
+          "title": "Stock Screener | Nasdaq"
+        }
+      ]
+    },
+    "/api/calendar/economicevents": {
+      "pattern": "/api/calendar/economicevents",
+      "exampleUrl": "https://api.nasdaq.com/api/calendar/economicevents?date=2026-05-15",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "asOf": "Fri, May 15, 2026",
+          "headers": {
+            "gmt": "Time",
+            "country": "Country",
+            "eventName": "Event",
+            "actual": "Actual",
+            "consensus": "Consensus",
+            "previous": "Previous",
+            "description": "Description"
+          },
+          "rows": [
+            {
+              "gmt": "02:00",
+              "country": "United Kingdom",
+              "eventName": "Business Investment",
+              "actual": "0.7%",
+              "consensus": "1.1%",
+              "previous": "-2.9%",
+              "description": "Business Investment measures the change in the total inflation-adjusted value of capital expenditure made by companies in the private sector.&lt;BR/&gt;&lt;BR/&gt;A higher than expected reading should be taken as positive/bullish for the GBP,\r\nwhile a lower than expected reading should be taken as negative/bearish for the GBP."
+            },
+            {
+              "gmt": "02:00",
+              "country": "United Kingdom",
+              "eventName": "Business Investment",
+              "actual": "-1.8%",
+              "consensus": " ",
+              "previous": "1.8%",
+              "description": ""
+            }
+          ]
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:14:25.239Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/economic-calendar",
+          "title": "Economic Calendar | Nasdaq"
+        }
+      ]
+    },
+    "/api/calendar/{var}": {
+      "pattern": "/api/calendar/{var}",
+      "exampleUrl": "https://api.nasdaq.com/api/calendar/dividends?date=2026-05-15",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "calendar": {
+            "asOf": "Fri, May 15, 2026",
+            "headers": {
+              "symbol": "Symbol",
+              "companyName": "Name",
+              "dividend_Ex_Date": "Ex-Dividend Date",
+              "payment_Date": "Payment Date",
+              "record_Date": "Record Date",
+              "dividend_Rate": "Dividend",
+              "indicated_Annual_Dividend": "Historical Annual Dividend",
+              "announcement_Date": "Announcement Date"
+            },
+            "rows": [
+              {
+                "companyName": "Amgen Inc. Common Stock",
+                "symbol": "AMGN",
+                "dividend_Ex_Date": "5/15/2026",
+                "payment_Date": "6/05/2026",
+                "record_Date": "5/15/2026",
+                "dividend_Rate": 2.52,
+                "indicated_Annual_Dividend": 10.08,
+                "announcement_Date": "3/04/2026"
+              },
+              {
+                "companyName": "Artesian Resources Corporation Class A Common Stock",
+                "symbol": "ARTNA",
+                "dividend_Ex_Date": "5/15/2026",
+                "payment_Date": "5/29/2026",
+                "record_Date": "5/15/2026",
+                "dividend_Rate": 0.3199,
+                "indicated_Annual_Dividend": 1.2796,
+                "announcement_Date": "5/05/2026"
+              }
+            ]
+          },
+          "timeframe": {
+            "minDate": "1988-10-03T00:00:00",
+            "maxDate": "2104-06-02T00:00:00"
+          }
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:14:25.240Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/economic-calendar",
+          "title": "Economic Calendar | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/earnings",
+          "title": "Earnings Reports | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/dividends",
+          "title": "Dividend Calendar | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/spos",
+          "title": "Secondary Public Offerings (SPOs) | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/ipos/overview?dealId=1348823-117360",
+          "title": "RIKU DINING GROUP Ltd (RIKU) IPO - NASDAQ.com"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stock-splits",
+          "title": "Stock Splits | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/ipos/financial-filings?dealId=1348823-117360",
+          "title": "Financial Filings | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/ipos/experts?dealId=1348823-117360",
+          "title": "Experts | Nasdaq"
+        }
+      ]
+    },
+    "/api/ipo/calendar": {
+      "pattern": "/api/ipo/calendar",
+      "exampleUrl": "https://api.nasdaq.com/api/ipo/calendar?date=2026-05",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "priced": {
+            "asOf": null,
+            "headers": {
+              "proposedTickerSymbol": "Symbol",
+              "companyName": "Company Name",
+              "proposedExchange": "Exchange/ Market",
+              "proposedSharePrice": "Price",
+              "sharesOffered": "Shares",
+              "pricedDate": "Date",
+              "dollarValueOfSharesOffered": "Offer Amount",
+              "dealStatus": "Actions"
+            },
+            "rows": [
+              {
+                "dealID": "1310181-117700",
+                "proposedTickerSymbol": "CBRS",
+                "companyName": "Cerebras Systems Inc.",
+                "proposedExchange": "NASDAQ Global Select",
+                "proposedSharePrice": "185.00",
+                "sharesOffered": "30,000,000",
+                "pricedDate": "5/14/2026",
+                "dollarValueOfSharesOffered": "$5,550,000,000",
+                "dealStatus": "Priced"
+              },
+              {
+                "dealID": "1365053-116821",
+                "proposedTickerSymbol": "AIAI",
+                "companyName": "AIAI Holdings Corp",
+                "proposedExchange": "NASDAQ Global",
+                "proposedSharePrice": null,
+                "sharesOffered": "69,483,430",
+                "pricedDate": "5/14/2026",
+                "dollarValueOfSharesOffered": "",
+                "dealStatus": "Priced"
+              }
+            ]
+          },
+          "upcoming": {
+            "upcomingTable": {
+              "asOf": null,
+              "headers": {
+                "proposedTickerSymbol": "Symbol",
+                "companyName": "Company Name",
+                "proposedExchange": "Exchange/ Market",
+                "proposedSharePrice": "Price",
+                "sharesOffered": "Shares",
+                "expectedPriceDate": "Expected IPO Date",
+                "dollarValueOfSharesOffered": "Offer Amount"
+              },
+              "rows": [
+                {
+                  "dealID": "1361754-116550",
+                  "proposedTickerSymbol": "BWGC",
+                  "companyName": "BW Industrial Holdings Inc.",
+                  "proposedExchange": "NYSE MKT",
+                  "proposedSharePrice": "6.00-7.00",
+                  "sharesOffered": "2,625,000",
+                  "expectedPriceDate": "5/27/2026",
+                  "dollarValueOfSharesOffered": "$21,131,250"
+                },
+                {
+                  "dealID": "1348823-117360",
+                  "proposedTickerSymbol": "RIKU",
+                  "companyName": "RIKU DINING GROUP Ltd",
+                  "proposedExchange": "NASDAQ Capital",
+                  "proposedSharePrice": "4.00-6.00",
+                  "sharesOffered": "5,000,000",
+                  "expectedPriceDate": "5/27/2026",
+                  "dollarValueOfSharesOffered": "$34,500,000"
+                }
+              ]
+            },
+            "lastUpdatedTime": "LAST UPDATED: 05/15/2026* - Source: EDGAR® Online"
+          },
+          "filed": {
+            "asOf": null,
+            "headers": {
+              "proposedTickerSymbol": "Symbol",
+              "companyName": "Company Name",
+              "filedDate": "Date Filed",
+              "dollarValueOfSharesOffered": "Offer Amount"
+            },
+            "rows": [
+              {
+                "dealID": "1386229-118045",
+                "proposedTickerSymbol": "YICCU",
+                "companyName": "Yorkville International Capital Corp.",
+                "filedDate": "5/14/2026",
+                "dollarValueOfSharesOffered": "$230,000,000"
+              },
+              {
+                "dealID": "1385808-118008",
+                "proposedTickerSymbol": "MDAT",
+                "companyName": "Web3Labs Global Inc.",
+                "filedDate": "5/13/2026",
+                "dollarValueOfSharesOffered": "$25,000,000"
+              }
+            ]
+          },
+          "withdrawn": {
+            "asOf": null,
+            "headers": {
+              "proposedTickerSymbol": "Symbol",
+              "companyName": "Company Name",
+              "proposedExchange": "Exchange/ Market",
+              "sharesOffered": "Shares",
+              "filedDate": "Date Filed",
+              "dollarValueOfSharesOffered": "Offer Amount",
+              "withdrawDate": "Date Withdrawn"
+            },
+            "rows": [
+              {
+                "dealID": "1348230-115249",
+                "proposedTickerSymbol": null,
+                "companyName": "Ultratrex Inc.",
+                "proposedExchange": null,
+                "sharesOffered": "1,250,000",
+                "filedDate": "9/08/2025",
+                "dollarValueOfSharesOffered": "$7,187,500",
+                "withdrawDate": "5/13/2026"
+              },
+              {
+                "dealID": "1360483-116432",
+                "proposedTickerSymbol": null,
+                "companyName": "EUPEC International Group Ltd",
+                "proposedExchange": null,
+                "sharesOffered": "3,750,000",
+                "filedDate": "12/19/2025",
+                "dollarValueOfSharesOffered": "$17,250,000",
+                "withdrawDate": "5/04/2026"
+              }
+            ]
+          },
+          "month": 5,
+          "year": 2026,
+          "totalResults": 3
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:15:14.386Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/ipos",
+          "title": "IPO Listings | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/spos",
+          "title": "Secondary Public Offerings (SPOs) | Nasdaq"
+        }
+      ]
+    },
+    "/api/quote/COMP/info": {
+      "pattern": "/api/quote/COMP/info",
+      "exampleUrl": "https://api.nasdaq.com/api/quote/COMP/info?assetclass=index",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "symbol": "COMP",
+          "companyName": "NASDAQ Composite Index",
+          "stockType": "",
+          "exchange": "Index",
+          "isNasdaqListed": false,
+          "isNasdaq100": false,
+          "isHeld": false,
+          "primaryData": {
+            "lastSalePrice": "26,225.15",
+            "netChange": "-410.07",
+            "percentageChange": "-1.54%",
+            "deltaIndicator": "down",
+            "lastTradeTimestamp": "May 15, 2026",
+            "isRealTime": false,
+            "bidPrice": "",
+            "askPrice": "",
+            "bidSize": "",
+            "askSize": "",
+            "volume": "",
+            "currency": null
+          },
+          "secondaryData": null,
+          "marketStatus": "After-Hours",
+          "assetClass": "INDEX",
+          "keyStats": {
+            "previousclose": {
+              "label": "Previous Close:",
+              "value": "26,635.22"
+            },
+            "dayrange": {
+              "label": "Day Range:",
+              "value": "26,097.54 - 26,460.76"
+            }
+          },
+          "notifications": null
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:19:03.254Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/comp",
+          "title": "NASDAQ Composite Index (COMP) Latest Quotes, Charts, Data & News | Nasdaq"
+        }
+      ]
+    },
+    "/api/quote/COMP/summary": {
+      "pattern": "/api/quote/COMP/summary",
+      "exampleUrl": "https://api.nasdaq.com/api/quote/COMP/summary?assetclass=index",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "symbol": "COMP",
+          "summaryData": {
+            "CurrentPrice": {
+              "label": "Current Value",
+              "value": "26,225.15"
+            },
+            "NetChangePercentageChange": {
+              "label": "Net Change / %",
+              "value": "-410.07/-1.54%"
+            },
+            "PreviousClose": {
+              "label": "Previous Close",
+              "value": "26,635.22"
+            },
+            "TodaysHigh": {
+              "label": "Today's High",
+              "value": "26,460.76"
+            },
+            "TodaysLow": {
+              "label": "Today's Low",
+              "value": "26,097.54"
+            }
+          },
+          "assetClass": "INDEX",
+          "additionalData": null,
+          "bidAsk": null
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:19:03.254Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/comp",
+          "title": "NASDAQ Composite Index (COMP) Latest Quotes, Charts, Data & News | Nasdaq"
+        }
+      ]
+    },
+    "/api/quote/{var}/chart": {
+      "pattern": "/api/quote/{var}/chart",
+      "exampleUrl": "https://api.nasdaq.com/api/quote/COMP/chart?assetclass=index",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "symbol": "COMP",
+          "company": "NASDAQ Composite Index",
+          "timeAsOf": "May 15, 2026",
+          "isNasdaq100": false,
+          "lastSalePrice": "26,225.15",
+          "netChange": "-410.07",
+          "percentageChange": "-1.54%",
+          "deltaIndicator": "down",
+          "previousClose": "26,635.22",
+          "volume": null,
+          "exchange": null,
+          "chart": [
+            {
+              "z": {
+                "dateTime": "9:30 AM ET",
+                "value": "26,253.19"
+              },
+              "x": 1778837459000,
+              "y": 26253.19
+            },
+            {
+              "z": {
+                "dateTime": "9:31 AM ET",
+                "value": "26,251.58"
+              },
+              "x": 1778837519000,
+              "y": 26251.58
+            }
+          ],
+          "volumeChart": null,
+          "events": null
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:19:03.254Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/comp",
+          "title": "NASDAQ Composite Index (COMP) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/ndx",
+          "title": "NASDAQ-100 (NDX) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nbi",
+          "title": "NASDAQ Biotechnology (NBI) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl",
+          "title": "Apple (AAPL) Stock Price, Quote, News & History | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq",
+          "title": "Invesco QQQ Trust, Series 1 (QQQ) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/btc",
+          "title": "Bitcoin (BTC) Latest Prices, Charts & Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/spy",
+          "title": "State Street SPDR S&P 500 ETF Trust (SPY) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/schd",
+          "title": "Schwab US Dividend Equity ETF (SCHD) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/vfinx",
+          "title": "Vanguard Index Trust 500 Index Fund (VFINX) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/fcntx",
+          "title": "Fidelity Contra Fund (FCNTX) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/agthx",
+          "title": "The Growth Fund of America Class A Shares (AGTHX) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nqus500lc",
+          "title": "Nasdaq US 500 Large Cap (NQUS500LC) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/eth",
+          "title": "Ethereum (ETH) Latest Prices, Charts & Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/xrp",
+          "title": "XRP (XRP) Latest Prices, Charts & Data | Nasdaq"
+        }
+      ]
+    },
+    "/api/quote/{var}/info": {
+      "pattern": "/api/quote/{var}/info",
+      "exampleUrl": "https://api.nasdaq.com/api/quote/NDX/info?assetclass=index",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "symbol": "NDX",
+          "companyName": "NASDAQ-100",
+          "stockType": "",
+          "exchange": "Index",
+          "isNasdaqListed": false,
+          "isNasdaq100": false,
+          "isHeld": false,
+          "primaryData": {
+            "lastSalePrice": "29,125.20",
+            "netChange": "-455.10",
+            "percentageChange": "-1.54%",
+            "deltaIndicator": "down",
+            "lastTradeTimestamp": "May 15, 2026",
+            "isRealTime": false,
+            "bidPrice": "",
+            "askPrice": "",
+            "bidSize": "",
+            "askSize": "",
+            "volume": "",
+            "currency": null
+          },
+          "secondaryData": null,
+          "marketStatus": "After-Hours",
+          "assetClass": "INDEX",
+          "keyStats": {
+            "previousclose": {
+              "label": "Previous Close:",
+              "value": "29,580.30"
+            },
+            "dayrange": {
+              "label": "Day Range:",
+              "value": "28,991.42 - 29,387.44"
+            }
+          },
+          "notifications": null
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:19:25.501Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/ndx",
+          "title": "NASDAQ-100 (NDX) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nbi",
+          "title": "NASDAQ Biotechnology (NBI) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl",
+          "title": "Apple (AAPL) Stock Price, Quote, News & History | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq",
+          "title": "Invesco QQQ Trust, Series 1 (QQQ) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/btc",
+          "title": "Bitcoin (BTC) Latest Prices, Charts & Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/spy",
+          "title": "State Street SPDR S&P 500 ETF Trust (SPY) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/schd",
+          "title": "Schwab US Dividend Equity ETF (SCHD) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/vfinx",
+          "title": "Vanguard Index Trust 500 Index Fund (VFINX) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/fcntx",
+          "title": "Fidelity Contra Fund (FCNTX) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/agthx",
+          "title": "The Growth Fund of America Class A Shares (AGTHX) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nqus500lc",
+          "title": "Nasdaq US 500 Large Cap (NQUS500LC) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/eth",
+          "title": "Ethereum (ETH) Latest Prices, Charts & Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/xrp",
+          "title": "XRP (XRP) Latest Prices, Charts & Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/comp/historical",
+          "title": "NASDAQ Composite Index (COMP) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/comp/news-headlines",
+          "title": "The Latest NASDAQ Composite Index (COMP) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/ndx/historical",
+          "title": "NASDAQ-100 (NDX) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/ndx/news-headlines",
+          "title": "The Latest NASDAQ-100 (NDX) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nbi/historical",
+          "title": "NASDAQ Biotechnology (NBI) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nbi/news-headlines",
+          "title": "The Latest NASDAQ Biotechnology (NBI) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/advanced-charting",
+          "title": "Apple (AAPL) Advanced Charting | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/news-headlines",
+          "title": "Apple (AAPL) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/press-releases",
+          "title": "Apple (AAPL) Press Releases | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/historical",
+          "title": "Apple (AAPL) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/financials",
+          "title": "Apple (AAPL) Financials | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/earnings",
+          "title": "Apple (AAPL) Earnings Report Date | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/sec-filings",
+          "title": "Apple (AAPL) SEC Filings | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/revenue-eps",
+          "title": "Apple (AAPL) Revenue EPS | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq/advanced-charting",
+          "title": "Invesco QQQ Trust, Series 1 (QQQ) Advanced Charting | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq/news-headlines",
+          "title": "(QQQ) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq/press-releases",
+          "title": "Invesco QQQ Trust, Series 1 (QQQ) Press Releases | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq/historical",
+          "title": "(QQQ) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/btc/historical",
+          "title": "Bitcoin (BTC) Historical Prices | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/btc/news-headlines",
+          "title": "Bitcoin (BTC) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/spy/historical",
+          "title": "(SPY) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/schd/historical",
+          "title": "(SCHD) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/vfinx/historical",
+          "title": "(VFINX) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/fcntx/historical",
+          "title": "(FCNTX) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/agthx/historical",
+          "title": "(AGTHX) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nqus500lc/historical",
+          "title": "Nasdaq US 500 Large Cap (NQUS500LC) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nqus500lc/news-headlines",
+          "title": "The Latest Nasdaq US 500 Large Cap (NQUS500LC) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/eth/historical",
+          "title": "Ethereum (ETH) Historical Prices | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/eth/news-headlines",
+          "title": "Ethereum (ETH) News Headlines | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/xrp/historical",
+          "title": "XRP (XRP) Historical Prices | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/xrp/news-headlines",
+          "title": "XRP (XRP) News Headlines | Nasdaq"
+        }
+      ]
+    },
+    "/api/quote/{var}/summary": {
+      "pattern": "/api/quote/{var}/summary",
+      "exampleUrl": "https://api.nasdaq.com/api/quote/NDX/summary?assetclass=index",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "symbol": "NDX",
+          "summaryData": {
+            "CurrentPrice": {
+              "label": "Current Value",
+              "value": "29,125.20"
+            },
+            "NetChangePercentageChange": {
+              "label": "Net Change / %",
+              "value": "-455.1/-1.54%"
+            },
+            "PreviousClose": {
+              "label": "Previous Close",
+              "value": "29,580.30"
+            },
+            "TodaysHigh": {
+              "label": "Today's High",
+              "value": "29,387.44"
+            },
+            "TodaysLow": {
+              "label": "Today's Low",
+              "value": "28,991.42"
+            }
+          },
+          "assetClass": "INDEX",
+          "additionalData": null,
+          "bidAsk": null
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:19:25.501Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/ndx",
+          "title": "NASDAQ-100 (NDX) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nbi",
+          "title": "NASDAQ Biotechnology (NBI) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl",
+          "title": "Apple (AAPL) Stock Price, Quote, News & History | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq",
+          "title": "Invesco QQQ Trust, Series 1 (QQQ) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/btc",
+          "title": "Bitcoin (BTC) Latest Prices, Charts & Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/spy",
+          "title": "State Street SPDR S&P 500 ETF Trust (SPY) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/schd",
+          "title": "Schwab US Dividend Equity ETF (SCHD) Latest Prices, Charts & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nqus500lc",
+          "title": "Nasdaq US 500 Large Cap (NQUS500LC) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/eth",
+          "title": "Ethereum (ETH) Latest Prices, Charts & Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/xrp",
+          "title": "XRP (XRP) Latest Prices, Charts & Data | Nasdaq"
+        }
+      ]
+    },
+    "/api/quote/list-type-extended/listing": {
+      "pattern": "/api/quote/list-type-extended/listing",
+      "exampleUrl": "https://api.nasdaq.com/api/quote/list-type-extended/listing?queryString=deficient",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "noncomplaintCompanyList": {
+            "asOf": null,
+            "headers": {
+              "IssuerName": "Issuer Name",
+              "AffectedIssues": "Symbol",
+              "Deficiency": "Deficiency",
+              "Market": "Market",
+              "NotificationDate": "Notification Date"
+            },
+            "rows": [
+              {
+                "IssuerName": "Able View Global Inc.",
+                "companies": [
+                  {
+                    "Deficiency": "Bid Price",
+                    "Market": "NCM",
+                    "NotificationDate": "12/4/2025",
+                    "AffectedIssues": [
+                      "ABLV"
+                    ]
+                  }
+                ]
+              },
+              {
+                "IssuerName": "Above Food Ingredients Inc.",
+                "companies": [
+                  {
+                    "Deficiency": "Delinquent (01/31/2025 20F)",
+                    "Market": "NGM",
+                    "NotificationDate": "6/11/2025",
+                    "AffectedIssues": [
+                      "ABVE",
+                      "ABVEW"
+                    ]
+                  },
+                  {
+                    "Deficiency": "Interim Financials (07/31/2025 6K)",
+                    "Market": "NGM",
+                    "NotificationDate": "2/3/2026",
+                    "AffectedIssues": [
+                      "ABVE",
+                      "ABVEW"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:20:10.762Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/non-compliant-company-list",
+          "title": "Noncompliant Companies | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/issuers-pending-suspension-delisting",
+          "title": "Issues Pending Suspension or Delisting | Nasdaq"
+        }
+      ]
+    },
+    "/api/ipo/{var}": {
+      "pattern": "/api/ipo/{var}",
+      "exampleUrl": "https://api.nasdaq.com/api/ipo/overview/?dealId=1348823-117360",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "poOverview": {
+            "Symbol": {
+              "label": "Proposed Symbol",
+              "value": "RIKU"
+            },
+            "CompanyName": {
+              "label": "Company Name",
+              "value": "RIKU DINING GROUP Ltd"
+            },
+            "Exchange": {
+              "label": "Exchange",
+              "value": "NASDAQ Capital"
+            },
+            "ProposedSharePrice": {
+              "label": "Share Price",
+              "value": "$4.00-6.00"
+            },
+            "NumberOfEmployees": {
+              "label": "Employees",
+              "value": "169 (as of 03/16/2026)"
+            },
+            "DealStatus": {
+              "label": "Status",
+              "value": "Filed"
+            },
+            "SharesOffered": {
+              "label": "Shares Offered",
+              "value": 5000000
+            },
+            "DollarValueOfSharesOffered": {
+              "label": "Offer amount",
+              "value": "$34,500,000"
+            },
+            "SharesOverAllotment": {
+              "label": "Shares Over Alloted",
+              "value": "750,000"
+            },
+            "Address": {
+              "label": "Company Address",
+              "value": "46/F, LEE GARDEN ONE, 33 HYSAN AVENUE   CAUSEWAY BAY  00000"
+            },
+            "PhoneNumber": {
+              "label": "Company Phone",
+              "value": "852-90187860"
+            },
+            "CompanyWebsite": {
+              "label": "Company Website",
+              "value": "<a href='http://www.rikugroup.com' target='_blank'>www.rikugroup.com</a>"
+            },
+            "CEO": {
+              "label": "CEO",
+              "value": "Ching Po Johnny Luk"
+            },
+            "StateOfIncorp": {
+              "label": "State of Inc",
+              "value": "--"
+            },
+            "FiscalYearEnd": {
+              "label": "Fiscal Year End",
+              "value": "--"
+            },
+            "TotalExpenseOfTheOffering": {
+              "label": "Total Offering Expense",
+              "value": "$2,144,210.00"
+            },
+            "ShareholderSharesOffered": {
+              "label": "Shareholder Shares Offered",
+              "value": "--"
+            },
+            "SharesOutstanding": {
+              "label": "Shares Outstanding",
+              "value": "22,666,666"
+            },
+            "LockupPeriodNumberofDays": {
+              "label": "Lockup Period (days)",
+              "value": "180"
+            },
+            "LockupPeriodExpirationDate": {
+              "label": "Lockup Expiration",
+              "value": "--"
+            },
+            "QuietPeriodExpirationDate": {
+              "label": "Quiet Period Expiration",
+              "value": "--"
+            },
+            "SECCIK": {
+              "label": "CIK",
+              "value": "0002058976"
+            },
+            "DealId": {
+              "label": "DealId",
+              "value": "1348823-117360"
+            }
+          },
+          "companyInformation": {
+            "companyName": "RIKU DINING GROUP Ltd",
+            "symbol": "RIKU",
+            "companyDescription": "We are a dynamic and growing international restaurant operator with a diverse\nportfolio of Japanese-themed dining concepts across Canada and Hong Kong.\nThrough our Operating Subsidiaries, we deliver authentic Japanese culinary\nexperiences by holding exclusive franchise rights for distinguished Japanese\nrestaurant brands in Hong Kong and Canada.\n\nIn Canada, we have established a robust presence with our exclusive franchise of\nAjisen Ramen, one of Japan’s most iconic ramen brands. Ajisen Ramen was brought\nto Canada by one of our founders, Mr. Johnny Luk, in 2007 as one of the first\nramen shops in Toronto. Since then, we have expanded to 13 locations across\nOntario, including four directly managed restaurants and nine sub-franchisees.\nUnlike typical ramen bars, our Ajisen Ramen outlets are full-service Japanese\nrestaurants, offering a broad and diverse menu that extends beyond ramen to\ninclude dishes like gyoza, karaage, and sizzling hot plates. We also cater to a\nwide range of customer preferences by offering a variety of soup bases, from\ntraditional pork bone broth to modern flavors like spicy mala, appealing to\ndifferent tastes and dietary needs. This versatility has allowed us to thrive in\nCanada’s competitive ramen market and continues to drive strong demand.\n\nIn Hong Kong, we franchise Yakiniku Kakura, Yakiniku 801, and Ufufu Café, three\ndistinct concepts that cater to various segments of the dining market. Yakiniku\nKakura, a premier Japanese barbecue restaurant from Saga, Kyushu, is renowned\nfor its premium A5 black Wagyu beef, offering a luxurious yet accessible dining\nexperience where each cut is meticulously selected for flavor and texture.\nYakiniku 801 provides a more casual yet high-quality yakiniku experience,\nserving affordable grilled meat that appeal to diners seeking excellent value in\na relaxed setting. Yakiniku experience aims to bring along the atmosphere and\nculture in Japan to HK, which differs from other barbeque restaurants. We are\nsourcing high quality ingredients from Japan which shipped to HK and ensure our\ncustomers to enjoy the premier meat at affordable price with comfortable\nenvironment. Finally, Ufufu Café blends Western-influenced Japanese cuisine,\nsuch as the Japanese style spaghetti and matcha desserts, with traditional\ndesserts, offering a unique and diverse menu that attracts a broad customer\nbase, from food enthusiasts to families. Together, these three franchises\nsolidify our position as a leader in both upscale and casual dining in Hong\nKong.\n\nAs of the date of this prospectus, we directly operate four Ajisen Ramen\nrestaurants and sub-franchise nine, making a total of 13 Ajisen Ramen\nrestaurants in Canada, alongside three self-operated and two sub-franchised\nYakiniku Kakura restaurants, one self-operated Yakiniku 801 restaurant and one\nself-operated Ufufu Cafe restaurant in Hong Kong. Our strategic goal is to\ncontinue expanding our footprint through new restaurant openings in key markets,\nleveraging our established brand recognition and operational expertise to meet\nthe growing demand for premium Japanese dining experiences across Asia and North\nAmerica.\n---\n\nOur principal executive office is located at 130 Dynamic Drive, Units 4-5,\nScarborough, ON, M1V 5C8, Canada. The telephone number of our principal\nexecutive office (416) 901-8860. Our registered agent in the Cayman Islands is\nCO Services Cayman Limited. Our registered office and our registered agent’s\noffice in the Cayman Islands are both located at the office of CO Services\nCayman Limited, P.O. Box 10008, Willow House, Cricket Square, Grand Cayman\nKY1-1001, Cayman Islands. Our agent for service of process in the United States\nis Cogency Global Inc. located at 122 East 42nd Street, 18th Floor, New York, NY\n10168. We maintain a website at www.rikugroup.com."
+          }
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:20:51.931Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/ipos/overview?dealId=1348823-117360",
+          "title": "RIKU DINING GROUP Ltd (RIKU) IPO - NASDAQ.com"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/ipos/financial-filings?dealId=1348823-117360",
+          "title": "Financial Filings | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/ipos/experts?dealId=1348823-117360",
+          "title": "Experts | Nasdaq"
+        }
+      ]
+    },
+    "/api/quote/COMP/historical": {
+      "pattern": "/api/quote/COMP/historical",
+      "exampleUrl": "https://api.nasdaq.com/api/quote/COMP/historical?assetclass=index&fromdate=2026-04-15&limit=10&todate=2026-05-15",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "symbol": "COMP",
+          "totalRecords": 22,
+          "tradesTable": {
+            "asOf": null,
+            "headers": {
+              "date": "Date",
+              "close": "Close/Last",
+              "volume": "Volume",
+              "open": "Open",
+              "high": "High",
+              "low": "Low"
+            },
+            "rows": [
+              {
+                "date": "05/14/2026",
+                "close": "26,635.22",
+                "volume": "--",
+                "open": "26,425.47",
+                "high": "26,707.14",
+                "low": "26,423.21"
+              },
+              {
+                "date": "05/13/2026",
+                "close": "26,402.34",
+                "volume": "--",
+                "open": "26,147.65",
+                "high": "26,474.18",
+                "low": "25,990.16"
+              }
+            ]
+          }
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:27:48.650Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/comp/historical",
+          "title": "NASDAQ Composite Index (COMP) Historical Data | Nasdaq"
+        }
+      ]
+    },
+    "/api/quote/{var}/historical": {
+      "pattern": "/api/quote/{var}/historical",
+      "exampleUrl": "https://api.nasdaq.com/api/quote/NDX/historical?assetclass=index&fromdate=2026-04-15&limit=10&todate=2026-05-15",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "symbol": "NDX",
+          "totalRecords": 22,
+          "tradesTable": {
+            "asOf": null,
+            "headers": {
+              "date": "Date",
+              "close": "Close/Last",
+              "volume": "Volume",
+              "open": "Open",
+              "high": "High",
+              "low": "Low"
+            },
+            "rows": [
+              {
+                "date": "05/14/2026",
+                "close": "29,580.30",
+                "volume": "--",
+                "open": "29,372.65",
+                "high": "29,678.89",
+                "low": "29,350.10"
+              },
+              {
+                "date": "05/13/2026",
+                "close": "29,366.94",
+                "volume": "--",
+                "open": "29,159.95",
+                "high": "29,452.26",
+                "low": "28,968.56"
+              }
+            ]
+          }
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:28:37.272Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/ndx/historical",
+          "title": "NASDAQ-100 (NDX) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nbi/historical",
+          "title": "NASDAQ Biotechnology (NBI) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/historical",
+          "title": "Apple (AAPL) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/qqq/historical",
+          "title": "(QQQ) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/btc/historical",
+          "title": "Bitcoin (BTC) Historical Prices | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/spy/historical",
+          "title": "(SPY) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/schd/historical",
+          "title": "(SCHD) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/vfinx/historical",
+          "title": "(VFINX) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/fcntx/historical",
+          "title": "(FCNTX) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/mutual-fund/agthx/historical",
+          "title": "(AGTHX) Historical | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/nqus500lc/historical",
+          "title": "Nasdaq US 500 Large Cap (NQUS500LC) Historical Data | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/eth/historical",
+          "title": "Ethereum (ETH) Historical Prices | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/cryptocurrency/xrp/historical",
+          "title": "XRP (XRP) Historical Prices | Nasdaq"
+        }
+      ]
+    },
+    "/api/company/AAPL/financials": {
+      "pattern": "/api/company/AAPL/financials",
+      "exampleUrl": "https://api.nasdaq.com/api/company/AAPL/financials?frequency=1",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "symbol": "AAPL",
+          "tabs": {
+            "incomeStatementTable": "Income Statement",
+            "balanceSheetTable": "Balance Sheet",
+            "cashFlowTable": "Cash Flow",
+            "financialRatiosTable": "Financial Ratios"
+          },
+          "incomeStatementTable": {
+            "asOf": null,
+            "headers": {
+              "value1": "Period Ending:",
+              "value2": "9/27/2025",
+              "value3": "9/28/2024",
+              "value4": "9/30/2023",
+              "value5": "9/24/2022"
+            },
+            "rows": [
+              {
+                "value1": "Total Revenue",
+                "value2": "$416,161,000",
+                "value3": "$391,035,000",
+                "value4": "$383,285,000",
+                "value5": "$394,328,000"
+              },
+              {
+                "value1": "Cost of Revenue",
+                "value2": "$220,960,000",
+                "value3": "$210,352,000",
+                "value4": "$214,137,000",
+                "value5": "$223,546,000"
+              }
+            ]
+          },
+          "balanceSheetTable": {
+            "asOf": null,
+            "headers": {
+              "value1": "Period Ending:",
+              "value2": "9/27/2025",
+              "value3": "9/28/2024",
+              "value4": "9/30/2023",
+              "value5": "9/24/2022"
+            },
+            "rows": [
+              {
+                "value1": "Current Assets",
+                "value2": "",
+                "value3": "",
+                "value4": "",
+                "value5": ""
+              },
+              {
+                "value1": "Cash and Cash Equivalents",
+                "value2": "$35,934,000",
+                "value3": "$29,943,000",
+                "value4": "$29,965,000",
+                "value5": "$23,646,000"
+              }
+            ]
+          },
+          "cashFlowTable": {
+            "asOf": null,
+            "headers": {
+              "value1": "Period Ending:",
+              "value2": "9/27/2025",
+              "value3": "9/28/2024",
+              "value4": "9/30/2023",
+              "value5": "9/24/2022"
+            },
+            "rows": [
+              {
+                "value1": "Net Income",
+                "value2": "$112,010,000",
+                "value3": "$93,736,000",
+                "value4": "$96,995,000",
+                "value5": "$99,803,000"
+              },
+              {
+                "value1": "Cash Flows-Operating Activities",
+                "value2": "",
+                "value3": "",
+                "value4": "",
+                "value5": ""
+              }
+            ]
+          },
+          "financialRatiosTable": {
+            "asOf": null,
+            "headers": {
+              "value1": "Period Ending:",
+              "value2": "9/27/2025",
+              "value3": "9/28/2024",
+              "value4": "9/30/2023",
+              "value5": "9/24/2022"
+            },
+            "rows": [
+              {
+                "value1": "Liquidity Ratios",
+                "value2": "",
+                "value3": "",
+                "value4": "",
+                "value5": ""
+              },
+              {
+                "value1": "Current Ratio",
+                "value2": "89.32929%",
+                "value3": "86.73126%",
+                "value4": "98.80117%",
+                "value5": "87.9356%"
+              }
+            ]
+          }
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:32:32.017Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/financials",
+          "title": "Apple (AAPL) Financials | Nasdaq"
+        }
+      ]
+    },
+    "/api/analyst/AAPL/earnings-date": {
+      "pattern": "/api/analyst/AAPL/earnings-date",
+      "exampleUrl": "https://api.nasdaq.com/api/analyst/AAPL/earnings-date",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "reportText": "Our vendor, Zacks Investment Research, hasn't provided us with the upcoming earnings report date.",
+          "heading": "AAPL Earnings Date",
+          "announcement": "Earnings announcement* for AAPL: ",
+          "eQRResposeModel": {
+            "text": [
+              "AAPL has a \"high\" Earnings Quality Ranking (EQR) for the 1st week. Earnings quality refers to the extent to which current earnings predict future earnings. \"High-quality\" earnings are expected to persist, while \"low-quality\" earnings do not. EQR is a weekly ranking of relative earnings quality for a large universe of publicly traded US equities. Companies are compared to peers in their industry. Find out more about EQR data."
+            ],
+            "boldText": null,
+            "dataLinkUrl": {
+              "label": "Find out more about EQR data",
+              "value": "https://data.nasdaq.com/databases/EQR"
+            }
+          }
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:32:57.607Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/earnings",
+          "title": "Apple (AAPL) Earnings Report Date | Nasdaq"
+        }
+      ]
+    },
+    "/api/quote/AAPL/eps": {
+      "pattern": "/api/quote/AAPL/eps",
+      "exampleUrl": "https://api.nasdaq.com/api/quote/AAPL/eps",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "symbol": "aapl",
+          "earningsPerShare": [
+            {
+              "type": "PreviousQuarter",
+              "period": "Jun 2025",
+              "consensus": 1.42,
+              "earnings": 1.57
+            },
+            {
+              "type": "PreviousQuarter",
+              "period": "Sep 2025",
+              "consensus": 1.73,
+              "earnings": 1.85
+            }
+          ]
+        },
+        "message": {},
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:32:57.607Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/earnings",
+          "title": "Apple (AAPL) Earnings Report Date | Nasdaq"
+        }
+      ]
+    },
+    "/api/company/AAPL/sec-filings": {
+      "pattern": "/api/company/AAPL/sec-filings",
+      "exampleUrl": "https://api.nasdaq.com/api/company/AAPL/sec-filings?limit=14&sortColumn=filed&sortOrder=desc&IsQuoteMedia=true",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "symbol": "AAPL",
+          "totalRecords": 43,
+          "latest": [
+            {
+              "label": "10-K",
+              "value": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=319541956&type=HTML&symbol=AAPL&companyName=Apple+Inc.&formType=10-K&formDescription=Annual+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2025-10-31"
+            },
+            {
+              "label": "10-Q",
+              "value": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320004561&type=HTML&symbol=AAPL&cdn=58e9a71c5abba33bf1ec8ae7dcc5950e&companyName=Apple+Inc.&formType=10-Q&formDescription=General+form+for+quarterly+reports+under+Section+13+or+15%28d%29&dateFiled=2026-05-01"
+            }
+          ],
+          "headers": {
+            "companyName": "Company Name",
+            "formType": "Form Type",
+            "filed": "Filed",
+            "period": "Period",
+            "view": "View"
+          },
+          "filterOptions": [
+            {
+              "group": "All",
+              "formtype": []
+            },
+            {
+              "group": "Annual Reports",
+              "formtype": [
+                "10-K",
+                "ARS"
+              ]
+            }
+          ],
+          "rows": [
+            {
+              "companyName": "Apple Inc.",
+              "reportingOwner": "BORDERS BEN",
+              "formType": "4",
+              "filed": "05/12/2026",
+              "period": "05/08/2026",
+              "view": {
+                "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320040810&type=HTML&symbol=AAPL&cdn=a2828742a708f48d584092c6118169c8&companyName=Apple+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-05-12",
+                "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320040810&type=DOC&symbol=AAPL&cdn=a2828742a708f48d584092c6118169c8&companyName=Apple+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-05-12",
+                "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320040810&type=PDF&symbol=AAPL&cdn=a2828742a708f48d584092c6118169c8&companyName=Apple+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-05-12",
+                "xbrLink": "",
+                "ixbrlContent": "",
+                "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320040810&type=XLS&symbol=AAPL&cdn=a2828742a708f48d584092c6118169c8&companyName=Apple+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-05-12",
+                "xBrlSubDoc": ""
+              }
+            },
+            {
+              "companyName": "Apple Inc.",
+              "reportingOwner": "LEVINSON ARTHUR D",
+              "formType": "4",
+              "filed": "05/08/2026",
+              "period": "05/06/2026",
+              "view": {
+                "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320032174&type=HTML&symbol=AAPL&cdn=d130fbf258ad163704e72bce5b9863d3&companyName=Apple+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-05-08",
+                "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320032174&type=DOC&symbol=AAPL&cdn=d130fbf258ad163704e72bce5b9863d3&companyName=Apple+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-05-08",
+                "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320032174&type=PDF&symbol=AAPL&cdn=d130fbf258ad163704e72bce5b9863d3&companyName=Apple+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-05-08",
+                "xbrLink": "",
+                "ixbrlContent": "",
+                "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320032174&type=XLS&symbol=AAPL&cdn=d130fbf258ad163704e72bce5b9863d3&companyName=Apple+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-05-08",
+                "xBrlSubDoc": ""
+              }
+            }
+          ]
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:33:21.384Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/sec-filings",
+          "title": "Apple (AAPL) SEC Filings | Nasdaq"
+        }
+      ]
+    },
+    "/api/company/AAPL/revenue": {
+      "pattern": "/api/company/AAPL/revenue",
+      "exampleUrl": "https://api.nasdaq.com/api/company/AAPL/revenue?limit=1",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "title": "APPLE INC. REVENUE & EARNINGS PER SHARE (EPS)",
+          "revenueTable": {
+            "asOf": null,
+            "headers": {
+              "value1": "Fiscal Quarter:",
+              "value2": "2026 (Fiscal Year)",
+              "value3": "2025 (Fiscal Year)",
+              "value4": "2024 (Fiscal Year)"
+            },
+            "rows": [
+              {
+                "value1": "December",
+                "value2": "",
+                "value3": "",
+                "value4": ""
+              },
+              {
+                "value1": "Revenue",
+                "value2": "$143,756(m)",
+                "value3": "$124,300(m)",
+                "value4": "$119,575(m)"
+              }
+            ]
+          }
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-15T21:33:42.268Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/aapl/revenue-eps",
+          "title": "Apple (AAPL) Revenue EPS | Nasdaq"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+	"permissions": {
+		"allow": [
+			"Bash(pnpm init *)",
+			"Bash(pnpm add *)",
+			"Bash(pnpm exec *)",
+			"Bash(pnpm test *)",
+			"Bash(pnpm start *)",
+			"Bash(Start-Sleep -Seconds 20)",
+			"Bash(Get-Content \"C:\\\\Users\\\\user\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-user-Development-Node-NasdaqCrawler\\\\8ac9351f-ba2d-40c9-8715-6a989f2a3421\\\\tasks\\\\b4qj2vfxc.output\")",
+			"Bash(node *)",
+			"PowerShell(Get-Process *)",
+			"Bash(Get-Content \"C:\\\\Users\\\\user\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-user-Development-Node-NasdaqCrawler\\\\8ac9351f-ba2d-40c9-8715-6a989f2a3421\\\\tasks\\\\bzpybw9ng.output\" -Wait)",
+			"Bash(Select-String --line-buffered \"new API patterns|fatal|Done\\\\.|Test limit|Error|ELIFECYCLE\")",
+			"Bash(grep -E --line-buffered \"new API patterns|queue: [0-9]{4,}|fatal|Done\\\\.|ELIFECYCLE\")",
+			"Bash(grep -E --line-buffered \"new API patterns|queue: [0-9]{4,}|fatal|Done\\\\.|ELIFECYCLE|Failed to load\")",
+			"PowerShell(Stop-Process *)",
+			"Bash(python3 *)",
+			"Bash(npx tsc *)",
+			"Bash(grep -E --line-buffered \"new API patterns|queue: [0-9]{4,}|fatal|Done\\\\.|ELIFECYCLE|Failed to load|Resuming\")",
+			"Bash(grep -E --line-buffered \"new API patterns|queue: [0-9]{4,}|fatal|Done\\\\.|ELIFECYCLE|Resuming\")"
+		]
+	}
+}
