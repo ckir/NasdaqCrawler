@@ -21,7 +21,9 @@
       "Bash(grep -E --line-buffered \"new API patterns|queue: [0-9]{4,}|fatal|Done\\\\.|ELIFECYCLE|Resuming\")",
       "Bash(serpapi --help)",
       "Bash(serpapi search *)",
-      "WebFetch(domain:www.nasdaq.com)"
+      "WebFetch(domain:www.nasdaq.com)",
+      "Bash(ls *.env*)",
+      "Bash(cat .env)"
     ]
   }
 }

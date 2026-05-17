@@ -8,9 +8,10 @@ An automated crawler designed to discover, map, and document the internal API en
 - **API Pattern Mapping**: Automatically identifies and groups similar API endpoints (e.g., collapsing `/api/quote/AAPL/info` and `/api/quote/MSFT/info` into `/api/quote/{var}/info`).
 - **Network Interception**: Captures real-time traffic to identify active endpoints and save representative response JSON samples.
 - **Static Analysis**: Parses JavaScript bundles on the fly to find static references to API URLs.
+- **Seed File**: Ships with a pre-populated `output/api-endpoints-default.json` containing manually curated endpoints (with live response samples and source page references). Used automatically on a fresh run when no output file exists.
 - **File Link Discovery**: Automatically identifies and records links to downloadable files (e.g., CSV, XLSX) hosted on the target domain.
 - **Human Emulation**: Includes random delays and browser-like headers to minimize automated detection.
-- **State Persistence**: Saves crawl state (visited pages, queue) to `state.json`, allowing you to resume interrupted crawls.
+- **State Persistence**: Saves crawl state (visited pages, queue) to `crawler-state.json`, allowing you to resume interrupted crawls.
 - **Blacklist & Throttling**: Intelligent path blacklisting (ignoring news/corporate pages) and structural throttling (limiting visits to similar page patterns like individual stock pages).
 
 ## Prerequisites
@@ -50,32 +51,34 @@ MAX_DELAY_MS=4500
 START_URL=https://www.nasdaq.com
 ```
 
+The seed file is always read from the same directory as `OUTPUT_FILE`, named `api-endpoints-default.json`. It is only used when `OUTPUT_FILE` does not yet exist.
+
 ## Usage
 
 ### Run the Crawler
 Standard mode (uses settings from `.env`):
 ```bash
-npm start
+pnpm start
 ```
 
 ### Headless Mode
 Run without opening a browser window:
 ```bash
-npm run start:headless
+pnpm run start:headless
 ```
 
 ### Test Mode
 Run a quick crawl limited to a few pages (defined by `TEST_LIMIT`):
 ```bash
-npm run crawl:test
+pnpm run crawl:test
 ```
 
 ### Build & Validate
 ```bash
-npm run build     # Compile TypeScript
-npm run lint      # Run Biome linter
-npm run test      # Run Jest tests
-npm run validate  # Run full check (format, lint, test, build)
+pnpm run build     # Compile TypeScript
+pnpm run lint      # Run Biome linter
+pnpm test          # Run Jest tests
+pnpm run validate  # Run full check (format, lint, test, build)
 ```
 
 ## Output
@@ -85,9 +88,15 @@ All discovered endpoints are saved to the path specified in `OUTPUT_FILE` (defau
 - **Endpoint Pattern**: The structural path of the API.
 - **Example URL**: A working URL for reference.
 - **Method**: HTTP method (defaults to GET).
-- **Source**: Whether it was found via network interception or static parsing.
-- **Response Sample**: A truncated JSON sample of the API response.
-- **Metadata**: Timestamps and the list of pages where the endpoint was first seen.
+- **Source**: Whether it was found via network interception (`network`), static JS parsing (`static`), or both (`both`).
+- **Response Sample**: A truncated JSON sample of the API response (arrays capped at 2 items).
+- **Metadata**: Timestamps and the list of pages where the endpoint was observed.
+
+### Seed File (`output/api-endpoints-default.json`)
+
+Contains a manually curated set of known endpoints — sourced from `ConfigAssetsBasic.mjs` — each populated with a live response sample (fetched via `apifetch.ps1`) and the Nasdaq page(s) where it appears. This file is loaded automatically on a fresh start and acts as a baseline; once the crawler writes its own `api-endpoints.json` that file takes over on subsequent runs.
+
+To refresh the seed file samples run `apifetch.ps1` against each `exampleUrl` entry and overwrite the `responseSample` fields.
 
 ### File Links
 Discovered links to files (CSV, XLSX, etc.) are saved to `file-links.json` in the same output directory. The file contains:
@@ -100,9 +109,13 @@ Discovered links to files (CSV, XLSX, etc.) are saved to `file-links.json` in th
 - `src/crawler.ts`: Core crawling logic and network interception.
 - `src/urlPattern.ts`: Logic for identifying and collapsing API paths into patterns.
 - `src/staticParser.ts`: Extracts potential API URLs from page content and JS files.
-- `src/storage.ts`: Handles reading/writing the `api-endpoints.json` registry.
+- `src/storage.ts`: Handles reading/writing the `api-endpoints.json` registry, including seed file fallback.
 - `src/state.ts`: Manages persistence of the crawl queue and visited pages.
 - `src/humanEmulation.ts`: Random delays and interaction timing.
+- `src/config.ts`: Typed configuration loaded from `.env`.
+- `output/api-endpoints-default.json`: Manually curated seed file with known endpoints and live response samples.
+- `ConfigAssetsBasic.mjs`: Source of truth for manually discovered API endpoint URLs and their Nasdaq page mappings.
+- `apifetch.ps1`: Helper script to fetch a Nasdaq API endpoint with the correct browser headers (used to populate the seed file).
 
 ## License
 

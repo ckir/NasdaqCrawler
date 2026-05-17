@@ -22,6 +22,17 @@ export function loadOutputFile(): OutputFile {
 			);
 		}
 	}
+	if (fs.existsSync(config.defaultOutputFile)) {
+		try {
+			const raw = fs.readFileSync(config.defaultOutputFile, "utf-8");
+			console.log("[storage] No output file found — seeding from default.");
+			return JSON.parse(raw) as OutputFile;
+		} catch {
+			console.warn(
+				"[storage] Could not parse default output file, starting fresh.",
+			);
+		}
+	}
 	return {
 		version: CURRENT_VERSION,
 		updatedAt: new Date().toISOString(),

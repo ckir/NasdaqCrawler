@@ -19,8 +19,14 @@ const outputFile = path.resolve(
 	process.env.OUTPUT_FILE ?? "./output/api-endpoints.json",
 );
 
+const defaultOutputFile = path.resolve(
+	path.dirname(outputFile),
+	"api-endpoints-default.json",
+);
+
 export const config = {
 	headless: getBool("HEADLESS", false),
+	defaultOutputFile,
 	testMode: getBool("TEST_MODE", false),
 	testLimit: getInt("TEST_LIMIT", 2),
 	outputFile,

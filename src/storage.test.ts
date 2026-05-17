@@ -16,6 +16,9 @@ jest.mock("./config", () => {
 		config: {
 			outputFile: path.resolve("./test-output/api-endpoints.json"),
 			fileLinksOutputFile: path.resolve("./test-output/file-links.json"),
+			defaultOutputFile: path.resolve(
+				"./test-output/api-endpoints-default.json",
+			),
 		},
 	};
 });
@@ -35,8 +38,71 @@ describe("storage", () => {
 	describe("API endpoints", () => {
 		it("should load empty output file if not exists", () => {
 			if (fs.existsSync(config.outputFile)) fs.unlinkSync(config.outputFile);
+			if (fs.existsSync(config.defaultOutputFile))
+				fs.unlinkSync(config.defaultOutputFile);
 			const data = loadOutputFile();
 			expect(data.endpoints).toEqual({});
+		});
+
+		it("should seed from default file when output file does not exist", () => {
+			if (fs.existsSync(config.outputFile)) fs.unlinkSync(config.outputFile);
+			const seed = {
+				version: 1,
+				updatedAt: new Date().toISOString(),
+				endpoints: {
+					"/api/seed": {
+						pattern: "/api/seed",
+						exampleUrl: "https://api.nasdaq.com/api/seed",
+						method: "GET",
+						source: "network" as const,
+						responseSample: { ok: true },
+						firstSeenAt: new Date().toISOString(),
+						seenOnPages: [],
+					},
+				},
+			};
+			fs.writeFileSync(config.defaultOutputFile, JSON.stringify(seed), "utf-8");
+			const data = loadOutputFile();
+			expect(data.endpoints["/api/seed"]).toBeDefined();
+			fs.unlinkSync(config.defaultOutputFile);
+		});
+
+		it("should fill null responseSample when upserted with real data", () => {
+			const data = loadOutputFile();
+			const seeded = {
+				pattern: "/api/fill",
+				exampleUrl: "https://api.nasdaq.com/api/fill",
+				method: "GET",
+				source: "network" as const,
+				responseSample: null,
+				firstSeenAt: new Date().toISOString(),
+				seenOnPages: [],
+			};
+			upsertEndpoint(data, seeded);
+			const withSample = { ...seeded, responseSample: { value: 42 } };
+			upsertEndpoint(data, withSample);
+			expect(data.endpoints["/api/fill"].responseSample).toEqual({
+				value: 42,
+			});
+		});
+
+		it("should not overwrite existing responseSample on upsert", () => {
+			const data = loadOutputFile();
+			const original = {
+				pattern: "/api/keep",
+				exampleUrl: "https://api.nasdaq.com/api/keep",
+				method: "GET",
+				source: "network" as const,
+				responseSample: { original: true },
+				firstSeenAt: new Date().toISOString(),
+				seenOnPages: [],
+			};
+			upsertEndpoint(data, original);
+			const updated = { ...original, responseSample: { replaced: true } };
+			upsertEndpoint(data, updated);
+			expect(data.endpoints["/api/keep"].responseSample).toEqual({
+				original: true,
+			});
 		});
 
 		it("should save and load output file", () => {
