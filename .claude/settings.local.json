@@ -23,7 +23,8 @@
       "Bash(serpapi search *)",
       "WebFetch(domain:www.nasdaq.com)",
       "Bash(ls *.env*)",
-      "Bash(cat .env)"
+      "Bash(cat .env)",
+      "Bash(git update-index *)"
     ]
   }
 }

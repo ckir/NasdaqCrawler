@@ -310,10 +310,8 @@ export async function runCrawler(): Promise<void> {
 				console.error(
 					`[crawler] Critical failure: Failed to load ${pageUrl}: ${(err as Error).message}`,
 				);
-				console.log("[crawler] Stopping gracefully due to load failure.");
 				await page.close();
-				signalShutdown();
-				break;
+				throw err;
 			}
 
 			// Dismiss cookie/privacy consent banner if present

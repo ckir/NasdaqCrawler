@@ -13,6 +13,7 @@ An automated crawler designed to discover, map, and document the internal API en
 - **Human Emulation**: Includes random delays and browser-like headers to minimize automated detection.
 - **State Persistence**: Saves crawl state (visited pages, queue) to `crawler-state.json`, allowing you to resume interrupted crawls.
 - **Blacklist & Throttling**: Intelligent path blacklisting (ignoring news/corporate pages) and structural throttling (limiting visits to similar page patterns like individual stock pages).
+- **Exit Codes**: Exits `0` on normal completion or user-initiated stop (SIGINT/SIGTERM); exits `1` on page load failure or any other unhandled error.
 
 ## Prerequisites
 

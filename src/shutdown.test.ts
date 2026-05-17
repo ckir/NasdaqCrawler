@@ -48,6 +48,7 @@ describe("Graceful Shutdown", () => {
 		const logSpy = jest.spyOn(console, "log").mockImplementation();
 
 		const mockPage = {
+			setExtraHTTPHeaders: jest.fn().mockResolvedValue({}),
 			goto: jest.fn().mockResolvedValue({}),
 			close: jest.fn().mockResolvedValue({}),
 			title: jest.fn().mockResolvedValue("Test Page"),
