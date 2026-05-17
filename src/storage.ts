@@ -71,11 +71,14 @@ export function upsertEndpoint(
 ): boolean {
 	const existing = data.endpoints[endpoint.pattern];
 	if (existing) {
-		// Merge new page references but don't overwrite the sample
+		// Merge new page references; fill in sample only if it was never captured
 		for (const page of endpoint.seenOnPages) {
 			if (!existing.seenOnPages.some((p: PageRef) => p.url === page.url)) {
 				existing.seenOnPages.push(page);
 			}
+		}
+		if (existing.responseSample === null && endpoint.responseSample !== null) {
+			existing.responseSample = endpoint.responseSample;
 		}
 		if (existing.source !== endpoint.source && existing.source !== "both") {
 			existing.source = "both";

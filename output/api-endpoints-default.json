@@ -1,0 +1,762 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-17T14:09:43.901Z",
+  "endpoints": {
+    "/api/market-info": {
+      "pattern": "/api/market-info",
+      "exampleUrl": "https://api.nasdaq.com/api/market-info",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "country": "U.S.",
+          "marketIndicator": "Market Closed",
+          "uiMarketIndicator": "Market Closed",
+          "marketCountDown": "Market Opens in 23H 20M",
+          "preMarketOpeningTime": "May 18, 2026 04:00 AM ET",
+          "preMarketClosingTime": "May 18, 2026 09:30 AM ET",
+          "marketOpeningTime": "May 18, 2026 09:30 AM ET",
+          "marketClosingTime": "May 18, 2026 04:00 PM ET",
+          "afterHoursMarketOpeningTime": "May 18, 2026 04:00 PM ET",
+          "afterHoursMarketClosingTime": "May 18, 2026 08:00 PM ET",
+          "previousTradeDate": "May 14, 2026",
+          "nextTradeDate": "May 18, 2026",
+          "isBusinessDay": false,
+          "mrktStatus": "Closed",
+          "mrktCountDown": "Opens in 23H 20M",
+          "pmOpenRaw": "2026-05-15T04:00:00",
+          "ahCloseRaw": "2026-05-15T20:00:00",
+          "openRaw": "2026-05-15T09:30:00",
+          "closeRaw": "2026-05-15T16:00:00"
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-17T00:00:00.000Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity",
+          "title": "Market Activity | Nasdaq"
+        }
+      ]
+    },
+    "/api/quote/list-type-extended/DAILY_MARKET_STATS": {
+      "pattern": "/api/quote/list-type-extended/DAILY_MARKET_STATS",
+      "exampleUrl": "https://api.nasdaq.com/api/quote/list-type-extended/DAILY_MARKET_STATS",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "indexValues": {
+            "indxtbl": {
+              "asOf": null,
+              "headers": {
+                "displayname": "Index Name",
+                "value": "Index Value",
+                "change": "Change",
+                "high": "High",
+                "low": "Low"
+              },
+              "rows": [
+                {
+                  "symbol": "NQGS",
+                  "displayname": "NASDAQ Global Select Composite",
+                  "value": "12,870.97",
+                  "change": "-198.08",
+                  "high": "12,987.72",
+                  "low": "12,807.04"
+                },
+                {
+                  "symbol": "NQGM",
+                  "displayname": "NASDAQ Global Market Composite",
+                  "value": "2,265.07",
+                  "change": "-57.33",
+                  "high": "2,285.27",
+                  "low": "2,256.74"
+                }
+              ]
+            },
+            "header": "Index Values",
+            "date": "Data As Of: 05/15/2026 05:16:26 PM"
+          },
+          "globalMarketSummary": {
+            "VolumeTotal": {
+              "label": "Total Share Volume",
+              "value": "7,734,815,717"
+            },
+            "gmsdetails": {
+              "NewHigh": {
+                "label": "New Highs",
+                "value": "102"
+              },
+              "NewLow": {
+                "label": "New Lows",
+                "value": "214"
+              },
+              "SecuritiesAdvanced": {
+                "label": "Advances",
+                "value": "1,218"
+              },
+              "SecuritiesDeclined": {
+                "label": "Declines",
+                "value": "3,756"
+              },
+              "SecuritiesUnchanged": {
+                "label": "Unchanged",
+                "value": "360"
+              },
+              "totaltrades": {
+                "label": "Total",
+                "value": "5,334"
+              }
+            },
+            "header": "NASDAQ Global Market Summary",
+            "date": "Data As Of: 05/15/2026 05:16:26 PM"
+          },
+          "nasdaqBlockTrades": {
+            "Blocktrade_date": "2026-05-14T00:00:00",
+            "blocktrade": {
+              "label": "Nasdaq Total",
+              "value": "65,195"
+            },
+            "header": "Number of Block Trades",
+            "date": "Data As Of: 05/14/2026 5:15 PM"
+          },
+          "sharevolume": {
+            "tblShrVol": {
+              "asOf": null,
+              "headers": {
+                "issueSymbol": "Symbol",
+                "name": "Company Name",
+                "lastSalePrice": "Price",
+                "lastSaleChange": "Change",
+                "shareVolume": "Share Volume"
+              },
+              "rows": [
+                {
+                  "issueSymbol": "NVDA",
+                  "name": "NVIDIA Corporation",
+                  "lastSalePrice": "$226.005",
+                  "lastSaleChange": "-9.735",
+                  "shareVolume": "128,607,566"
+                },
+                {
+                  "issueSymbol": "INTC",
+                  "name": "Intel Corporation",
+                  "lastSalePrice": "$108.83",
+                  "lastSaleChange": "-7.10",
+                  "shareVolume": "104,958,364"
+                }
+              ]
+            },
+            "header": "NASDAQ Most Active by Share Volume",
+            "date": "Data As Of: 05/15/2026 03:53:40 PM"
+          },
+          "dollarvolume": {
+            "tblDlrVol": {
+              "asOf": null,
+              "headers": {
+                "issueSymbol": "Symbol",
+                "name": "Company Name",
+                "lastSalePrice": "Price",
+                "lastSaleChange": "Change",
+                "dollarVolume": "Dollar Volume"
+              },
+              "rows": [
+                {
+                  "issueSymbol": "NVDA",
+                  "name": "NVIDIA Corporation",
+                  "lastSalePrice": "$225.32",
+                  "lastSaleChange": "-10.42",
+                  "dollarVolume": "$40,550,255,920"
+                },
+                {
+                  "issueSymbol": "QQQ",
+                  "name": "Invesco QQQ Trust, Series 1",
+                  "lastSalePrice": "$708.93",
+                  "lastSaleChange": "-10.86",
+                  "dollarVolume": "$36,643,032,763"
+                }
+              ]
+            },
+            "header": "NASDAQ Most Active by Dollar Volume",
+            "date": "Data As Of: 05/15/2026 04:15:00 PM"
+          }
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-17T00:00:00.000Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/daily-market-statistics",
+          "title": "Daily Market Statistics | Nasdaq"
+        }
+      ]
+    },
+    "/api/quote/{var}/info": {
+      "pattern": "/api/quote/{var}/info",
+      "exampleUrl": "https://api.nasdaq.com/api/quote/QMI/info?assetclass=index",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "symbol": "QMI",
+          "companyName": "Nasdaq-100 Pre Market Indicator",
+          "stockType": "",
+          "exchange": "NASDAQ",
+          "isNasdaqListed": false,
+          "isNasdaq100": false,
+          "isHeld": false,
+          "primaryData": {
+            "lastSalePrice": "29,193.92",
+            "netChange": "-386.38",
+            "percentageChange": "-1.31%",
+            "deltaIndicator": "down",
+            "lastTradeTimestamp": "May 15, 2026",
+            "isRealTime": false,
+            "bidPrice": "",
+            "askPrice": "",
+            "bidSize": "",
+            "askSize": "",
+            "volume": "",
+            "currency": null
+          },
+          "secondaryData": null,
+          "marketStatus": "Closed",
+          "assetClass": "INDEX",
+          "keyStats": {
+            "previousclose": {
+              "label": "Previous Close:",
+              "value": ""
+            },
+            "dayrange": {
+              "label": "Day Range:",
+              "value": "29,050.15 - 29,194.62"
+            }
+          },
+          "notifications": null
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-17T00:00:00.000Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/qmi",
+          "title": "Nasdaq-100 Pre Market Indicator (QMI) | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/ndx",
+          "title": "NASDAQ-100 (NDX) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/qiv",
+          "title": "NASDAQ-100 AHI (QIV) Latest Quotes, Charts, Data & News | Nasdaq"
+        }
+      ]
+    },
+    "/api/fivedayvolume/extended-trading": {
+      "pattern": "/api/fivedayvolume/extended-trading",
+      "exampleUrl": "https://api.nasdaq.com/api/fivedayvolume/extended-trading/?marketType=pre",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "info": {
+            "title": "Pre-Market 5-Day Volume Chart",
+            "date": "May 15, 2026",
+            "statement": "After Hours Market Closed",
+            "volume": "199,919,770"
+          },
+          "table": {
+            "asOf": null,
+            "headers": {
+              "volume": "Volume",
+              "date": "Date"
+            },
+            "rows": [
+              {
+                "volume": "199,919,770",
+                "date": "05/15/2026"
+              },
+              {
+                "volume": "152,714,494",
+                "date": "05/14/2026"
+              }
+            ]
+          }
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-17T00:00:00.000Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/pre-market",
+          "title": "Pre-Market | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/after-hours",
+          "title": "After Hours | Nasdaq"
+        }
+      ]
+    },
+    "/api/quote/list-type/{var}": {
+      "pattern": "/api/quote/list-type/{var}",
+      "exampleUrl": "https://api.nasdaq.com/api/quote/list-type/NASDAQ100?limit=20&sortOrder=ASC&queryString=sectorInfo",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "totalrecords": 101,
+          "limit": 101,
+          "offset": 0,
+          "date": "May 14, 2026",
+          "data": {
+            "asOf": null,
+            "headers": {
+              "symbol": "Symbol",
+              "sector": "Sector",
+              "companyName": "Name",
+              "marketCap": "Market Cap",
+              "lastSalePrice": "Last Sale",
+              "netChange": "Net Change",
+              "percentageChange": "Percentage Change"
+            },
+            "rows": [
+              {
+                "symbol": "AAPL",
+                "sector": "Technology",
+                "companyName": "Apple Inc. Common Stock",
+                "marketCap": "4,409,584,891,880",
+                "lastSalePrice": "$300.23",
+                "netChange": "$2.02",
+                "percentageChange": "+0.68%",
+                "deltaIndicator": "up"
+              },
+              {
+                "symbol": "ABNB",
+                "sector": "Consumer Discretionary",
+                "companyName": "Airbnb, Inc. Class A Common Stock",
+                "marketCap": "80,069,349,021",
+                "lastSalePrice": "$132.85",
+                "netChange": "$0.82",
+                "percentageChange": "-0.61%",
+                "deltaIndicator": "down"
+              }
+            ]
+          },
+          "filters": null,
+          "title": null
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-17T00:00:00.000Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/index/ndx",
+          "title": "NASDAQ-100 (NDX) Latest Quotes, Charts, Data & News | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/nasdaq-52-week-hi-low",
+          "title": "Nasdaq 52-Week High/Low | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/nyse-52-week-hi-low",
+          "title": "NYSE 52-Week High/Low | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/amex-52-week-hi-low",
+          "title": "Amex 52-Week High/Low | Nasdaq"
+        }
+      ]
+    },
+    "/api/screener/stocks": {
+      "pattern": "/api/screener/stocks",
+      "exampleUrl": "https://api.nasdaq.com/api/screener/stocks?tableonly=true&limit=1000&marketcap=large",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "filters": null,
+          "table": {
+            "asOf": null,
+            "headers": {
+              "symbol": "Symbol",
+              "name": "Name",
+              "lastsale": "Last Sale",
+              "netchange": "Net Change",
+              "pctchange": "% Change",
+              "marketCap": "Market Cap"
+            },
+            "rows": [
+              {
+                "symbol": "NVO",
+                "name": "Novo Nordisk A/S Common Stock",
+                "lastsale": "$44.74",
+                "netchange": "-1.06",
+                "pctchange": "-2.314%",
+                "marketCap": "199,764,100,000",
+                "url": "/market-activity/stocks/nvo"
+              },
+              {
+                "symbol": "PANW",
+                "name": "Palo Alto Networks, Inc. Common Stock",
+                "lastsale": "$242.83",
+                "netchange": "4.62",
+                "pctchange": "1.939%",
+                "marketCap": "198,149,280,000",
+                "url": "/market-activity/stocks/panw"
+              }
+            ]
+          },
+          "totalrecords": 897,
+          "asof": "Last price as of May 15, 2026"
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-17T00:00:00.000Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks/screener",
+          "title": "Stock Screener | Nasdaq"
+        }
+      ]
+    },
+    "/api/marketmovers": {
+      "pattern": "/api/marketmovers",
+      "exampleUrl": "https://api.nasdaq.com/api/marketmovers?assetclass=stocks&exchangeStatus=pre&limit=20",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "STOCKS": {
+            "MostActiveByShareVolume": {
+              "dataAsOf": "Data as of May 17, 2026 10:05 AM ET",
+              "lastTradeTimestamp": "May 17, 2026 10:05 AM ET",
+              "table": {
+                "asOf": null,
+                "headers": {
+                  "symbol": "Symbol",
+                  "name": "Name",
+                  "lastSalePrice": "Last",
+                  "lastSaleChange": "Change",
+                  "change": "Share Volume"
+                },
+                "rows": [
+                  {
+                    "symbol": "SOXS",
+                    "name": "Direxion Daily Semiconductor Bear 3x Shares",
+                    "lastSalePrice": "$9.255",
+                    "lastSaleChange": "+0.985",
+                    "change": "394,664,097.912339",
+                    "deltaIndicator": "up"
+                  },
+                  {
+                    "symbol": "HCWB",
+                    "name": "HCW Biologics Inc.",
+                    "lastSalePrice": "$1.22",
+                    "lastSaleChange": "+0.883",
+                    "change": "384,914,940.367322",
+                    "deltaIndicator": "up"
+                  }
+                ]
+              }
+            },
+            "MostAdvanced": {
+              "dataAsOf": "Data as of May 17, 2026 10:05 AM ET",
+              "lastTradeTimestamp": "May 17, 2026 10:05 AM ET",
+              "table": {
+                "asOf": null,
+                "headers": {
+                  "symbol": "Symbol",
+                  "name": "Name",
+                  "lastSalePrice": "Last",
+                  "lastSaleChange": "Change",
+                  "change": "% Change"
+                },
+                "rows": [
+                  {
+                    "symbol": "DUKRW",
+                    "name": "DUKE Robotics Corp. Warrant",
+                    "lastSalePrice": "$1.8",
+                    "lastSaleChange": "+1.79",
+                    "change": "+17900%",
+                    "deltaIndicator": "up"
+                  },
+                  {
+                    "symbol": "EXYNW",
+                    "name": "Exyn Technologies, Inc. Warrant",
+                    "lastSalePrice": "$0.81",
+                    "lastSaleChange": "+0.8",
+                    "change": "+8000%",
+                    "deltaIndicator": "up"
+                  }
+                ]
+              }
+            },
+            "MostDeclined": {
+              "dataAsOf": "Data as of May 17, 2026 10:05 AM ET",
+              "lastTradeTimestamp": "May 17, 2026 10:05 AM ET",
+              "table": {
+                "asOf": null,
+                "headers": {
+                  "symbol": "Symbol",
+                  "name": "Name",
+                  "lastSalePrice": "Last",
+                  "lastSaleChange": "Change",
+                  "change": "% Change"
+                },
+                "rows": [
+                  {
+                    "symbol": "ELPW",
+                    "name": "Elong Power Holding Limited",
+                    "lastSalePrice": "$0.95",
+                    "lastSaleChange": "-0.99",
+                    "change": "-51.0309%",
+                    "deltaIndicator": "down"
+                  },
+                  {
+                    "symbol": "WOK",
+                    "name": "WORK Medical Technology Group LTD",
+                    "lastSalePrice": "$0.66",
+                    "lastSaleChange": "-0.64",
+                    "change": "-49.2308%",
+                    "deltaIndicator": "down"
+                  }
+                ]
+              }
+            },
+            "MostActiveByDollarVolume": {
+              "dataAsOf": "Data as of May 17, 2026 10:05 AM ET",
+              "lastTradeTimestamp": "May 17, 2026 10:05 AM ET",
+              "table": {
+                "asOf": null,
+                "headers": {
+                  "symbol": "Symbol",
+                  "name": "Name",
+                  "lastSalePrice": "Last",
+                  "lastSaleChange": "Change",
+                  "change": "% Change"
+                },
+                "rows": [
+                  {
+                    "symbol": "NVDA",
+                    "name": "NVIDIA Corporation",
+                    "lastSalePrice": "$225.32",
+                    "lastSaleChange": "-10.42",
+                    "change": "-4.4201%",
+                    "deltaIndicator": "down"
+                  },
+                  {
+                    "symbol": "MU",
+                    "name": "Micron Technology, Inc.",
+                    "lastSalePrice": "$724.66",
+                    "lastSaleChange": "-51.35",
+                    "change": "-6.6172%",
+                    "deltaIndicator": "down"
+                  }
+                ]
+              }
+            },
+            "Nasdaq100Movers": {
+              "dataAsOf": "Data as of May 14, 2026 4:00 PM ET",
+              "lastTradeTimestamp": "May 14, 2026 4:00 PM ET",
+              "table": {
+                "asOf": null,
+                "headers": {
+                  "symbol": "Symbol",
+                  "name": "Name",
+                  "lastSalePrice": "Last",
+                  "lastSaleChange": "Change",
+                  "change": "% Change"
+                },
+                "rows": [
+                  {
+                    "symbol": "ADBE",
+                    "name": "Adobe Inc. Common Stock",
+                    "lastSalePrice": "247.6000",
+                    "lastSaleChange": "+10.5900",
+                    "change": "+4.47%",
+                    "deltaIndicator": "up"
+                  },
+                  {
+                    "symbol": "AMD",
+                    "name": "Advanced Micro Devices, Inc. Common Stock",
+                    "lastSalePrice": "424.1000",
+                    "lastSaleChange": "-25.6000",
+                    "change": "-5.69%",
+                    "deltaIndicator": "down"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-17T00:00:00.000Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/pre-market",
+          "title": "Pre-Market | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/most-active",
+          "title": "Most Active Stocks | Nasdaq"
+        },
+        {
+          "url": "https://www.nasdaq.com/market-activity/after-hours",
+          "title": "After Hours | Nasdaq"
+        }
+      ]
+    },
+    "/api/screener/etf": {
+      "pattern": "/api/screener/etf",
+      "exampleUrl": "https://api.nasdaq.com/api/screener/etf?performance=ry10",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "filters": null,
+          "records": {
+            "totalrecords": 1218,
+            "limit": 50,
+            "offset": 0,
+            "data": {
+              "asOf": null,
+              "headers": {
+                "symbol": "SYMBOL",
+                "companyName": "NAME",
+                "lastSalePrice": "LAST PRICE",
+                "percentageChange": "% CHANGE",
+                "oneYearPercentagechange": "1 yr % CHANGE"
+              },
+              "rows": [
+                {
+                  "oneYearPercentage": "34.92%",
+                  "symbol": "CHNU",
+                  "companyName": "2x Chainlink ETF",
+                  "lastSalePrice": "$25.395",
+                  "netChange": "-2.7642",
+                  "percentageChange": "-9.82%",
+                  "deltaIndicator": "down"
+                },
+                {
+                  "oneYearPercentage": "47.35%",
+                  "symbol": "CNEQ",
+                  "companyName": "Alger Concentrated Equity ETF",
+                  "lastSalePrice": "$39.03",
+                  "netChange": "-0.77",
+                  "percentageChange": "-1.93%",
+                  "deltaIndicator": "down"
+                }
+              ]
+            }
+          }
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-17T00:00:00.000Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/etf/screener",
+          "title": "Stock Screener - ETFs | Nasdaq"
+        }
+      ]
+    },
+    "/api/quote/list-type-extended/validea": {
+      "pattern": "/api/quote/list-type-extended/validea",
+      "exampleUrl": "https://api.nasdaq.com/api/quote/list-type-extended/validea?queryString=factorscore",
+      "method": "GET",
+      "source": "network",
+      "responseSample": {
+        "data": {
+          "asOf": null,
+          "headers": {
+            "ticker": "Symbol",
+            "companyName": "Company Name",
+            "price": "Price",
+            "mktCap": "Market Cap",
+            "valuePercentile": "Value Percentile",
+            "momentumPercentile": "Momentum Percentile",
+            "qualityPercentile": "Quality Percentile",
+            "totalPercentile": "Total Percentile"
+          },
+          "rows": [
+            {
+              "ticker": "BMY",
+              "companyName": "BRISTOL-MYERS SQUIBB CO",
+              "price": "$57.00",
+              "mktCap": "$116,398,000,000",
+              "valuePercentile": "29",
+              "qualityPercentile": "16",
+              "momentumPercentile": "35",
+              "totalPercentile": "1"
+            },
+            {
+              "ticker": "EBF",
+              "companyName": "ENNIS INC",
+              "price": "$20.02",
+              "mktCap": "$506,000,000",
+              "valuePercentile": "10",
+              "qualityPercentile": "57",
+              "momentumPercentile": "49",
+              "totalPercentile": "1"
+            }
+          ]
+        },
+        "message": null,
+        "status": {
+          "rCode": 200,
+          "bCodeMessage": null,
+          "developerMessage": null
+        }
+      },
+      "firstSeenAt": "2026-05-17T00:00:00.000Z",
+      "seenOnPages": [
+        {
+          "url": "https://www.nasdaq.com/market-activity/stocks",
+          "title": "Stock Market Data with Stock Price Feeds | Nasdaq"
+        }
+      ]
+    }
+  }
+}
