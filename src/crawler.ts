@@ -230,6 +230,8 @@ export async function runCrawler(): Promise<void> {
 			"--use-fake-ui-for-media-stream",
 			"--use-fake-device-for-media-stream",
 			"--disable-infobars",
+			"--disable-http2",
+			"--disable-gpu",
 		],
 	});
 
